@@ -1,0 +1,45 @@
+Question
+========
+Which of the following expressions will return `TRUE`?
+
+Answerlist
+----------
+* `"foo" != "bar"`
+* `(8 + 6) < (8 * 6)`
+* `(8 - 1) == 7 & 7 >= (14 / 2)`
+* `"alice" == "bob" | "alice" == "alice"`
+* `!(6 > 7)`
+* `TRUE`
+* `FALSE`
+* `"foo" == "bar"`
+* `(8 - 1) == 7 & 7 > (14 / 2)`
+* `"alice" == "bob" | "alice" != "alice"`
+* `"alice" == "bob" & "alice" == "alice"`
+* `!TRUE`
+* `TRUE & FALSE`
+
+Solution
+========
+
+Answerlist
+----------
+* TRUE: "foo" is not equal to "bar"
+* TRUE: 14 is strictly less than 48
+* TRUE: 7 is equal to 7, and 7 is greater than or equal to 7
+* TRUE: "alice" is not equal to "bob", but "alice is equal to "alice"
+* TRUE: 6 is not strictly greater than 7, and that result is negated
+* TRUE: Trivially
+* FALSE: Trivially
+* FALSE: "foo" is not equal to "bar"
+* FALSE: 7 is equal to 7, but 7 is not strictly greater than 7
+* FALSE: "alice" is not equal to "bob", and "alice" is equal to "alice"
+* FALSE: "alice" is not equal to "bob"
+* FALSE: Trivial negation
+* FALSE: Trivially
+
+Meta-information
+================
+exname: Logical Comparisons
+extype: mchoice
+exsolution: 1111110000000
+exshuffle: 6

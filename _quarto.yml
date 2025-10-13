@@ -1,0 +1,57 @@
+project:
+  type: website
+  execute-dir: project
+  output-dir: docs
+
+format:
+  html:
+    theme:
+      - solar
+      - html/custom.scss
+    css:
+      - html/webex.css
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
+    include-after-body: 
+      - text: |
+          <script src="/js/bootstrapify.js"></script>
+          <script src="/js/webex.js"></script>
+
+engine: knitr
+
+knitr:
+  opts_chunk:
+    message: false
+    warning: false
+    fig-align: center
+
+webr:
+  channel-type: "post-message"
+  autoload-packages: false
+
+custom-callout:
+  practice:
+    title: "Practice"
+    icon-symbol: "fa-gears"
+    color: "green"
+  reading:
+    title: "Reading"
+    icon-symbol: "fa-book-open"
+    color: "purple"
+  reading-advanced:
+    title: "Advanced Reading"
+    icon-symbol: "fa-book-open"
+    color: "red"
+  resource:
+    title: "External Resources"
+    icon-symbol: "fa-link"
+    color: "orange"
+
+filters:
+  - webr
+  - custom-callout
+
+## Import the website metadata since that section gets pretty complicated
+metadata-files:
+  - _website.yml

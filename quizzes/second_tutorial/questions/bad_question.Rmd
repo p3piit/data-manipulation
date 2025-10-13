@@ -1,0 +1,39 @@
+Question
+========
+Yes or No?
+
+Answerlist
+----------
+* Yes
+* Yes
+* Yes
+* Yes
+* Yes
+* No
+* No
+* No
+* No
+* No
+
+Solution
+========
+
+Answerlist
+----------
+* Correct
+* Wrong
+* Wrong
+* Wrong
+* Wrong
+* Wrong
+* Wrong
+* Wrong
+* Wrong
+* Wrong
+
+Meta-information
+================
+exname: Bad Question
+extype: schoice
+exsolution: 1000000000
+exshuffle: 5

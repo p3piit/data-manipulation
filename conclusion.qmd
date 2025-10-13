@@ -1,0 +1,26 @@
+---
+title: "Conclusion"
+format:
+  html: 
+    toc: false
+    link-external-icon: false
+    link-external-newwindow: false
+---
+
+```{r include = FALSE}
+source(here::here("R", "buttons.R"))
+```
+
+Use this page to provide some kind of brief wrap-up.
+
+## Next Steps
+
+If your module feeds naturally into another, link that module through the button below as a suggestion for further study.
+
+- Here, we're linking to the *First Steps* module.
+
+```{r}
+#| echo: false
+#| results: asis
+next_module_button("https://www.openstatprog.com/first-steps/")
+```

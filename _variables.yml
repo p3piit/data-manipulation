@@ -1,0 +1,5 @@
+tab_title:
+  editor: "{{< fa code >}}&ensp;Interactive Editor"
+  question: "{{< fa circle-question >}}&ensp;Question"
+  hint: "{{< fa lightbulb >}}&ensp;Hint"
+  solution: "{{< fa circle-check >}}&ensp;Solution"

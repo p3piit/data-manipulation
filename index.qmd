@@ -1,0 +1,42 @@
+---
+title: "Module Template"
+page-navigation: false
+format:
+  html: 
+    toc: false
+---
+
+```{r, echo = FALSE, include = FALSE}
+source(here::here("R", "buttons.R"))
+```
+
+Welcome to our template module. Every module comprises a series of topical *tutorials*, such as the three linked below.
+
+1. [First Topic](/tutorials/first_tutorial/index.qmd)
+1. [Second Topic](/tutorials/second_tutorial/index.qmd)
+
+Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout. Each tutorial
+section should be wrapped up with a knowledge quiz.
+
+## Learning Goals
+
+After completing this module, you will be able to:
+
+### Tutorial 1
+
+1. A thing you should learn from Tutorial 1.
+1. Another thing you should learn from Tutorial 1.
+1. One more thing you should learn From Tutorial 1.
+
+### Tutorial 2
+
+1. A thing you should learn from Tutorial 2.
+1. Another thing you should learn from Tutorial 2.
+
+Click the button below to get started with the first tutorial.
+
+```{r}
+#| echo: false
+#| results: asis
+begin_button("/tutorials/first_tutorial/index.html")
+```

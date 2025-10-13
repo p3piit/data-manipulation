@@ -1,0 +1,32 @@
+```{r prep, echo = FALSE, results = "hide", cache = FALSE}
+library(exams)
+
+## Generate some data
+x <- sample(1:5, 1)
+y <- sample(1:5, 1)
+z <- sample(1:5, 1)
+
+## Calculate the answer
+a <- (x + y) / z
+```
+
+Question
+========
+What is the value of $x$ in the following equation?
+
+$$
+x = \frac{`r x` + `r y`}{`r z`}
+$$
+
+Round your answer to two decimal places.
+
+Solution
+========
+After rounding, we get `r fmt(a, digits = 2)`.
+
+Meta-information
+================
+exname: Arithmetic
+extype: num
+exsolution: `r fmt(a, digits = 2)`
+extol: 0.01

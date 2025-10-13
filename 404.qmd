@@ -1,0 +1,14 @@
+---
+title: "Page Not Found"
+sidebar: false
+fig-cap-location: "bottom"
+page-navigation: false
+back-to-top-navigation: false
+format:
+  html:
+    css: html/system_page.css
+---
+
+Sorry, our navigation gremlins haven't caught anything. We can't retrieve the requested page.
+
+![[Image Source](https://giphy.com/gifs/glas-2018-26DNaprpfyewhJ2wg)](/assets/images/ankita_fishing.gif){width=100%}

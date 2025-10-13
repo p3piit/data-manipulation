@@ -1,0 +1,76 @@
+/*-- scss:defaults --*/
+
+$code-bg: $gray-800; //#198754; // green
+
+// Block code
+// $monokai-bg: #2e3440;
+
+/*-- scss:rules --*/
+
+.hidden {
+  display: none;
+}
+
+/* Code blocks */
+pre {
+  background-color: darken($gray-600, 15%);
+  border: 1px solid $gray-800;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Inline code */
+code {
+  /* background-color: #000000; //#f8f9fa; */
+  //padding: 0; /*0.2em 0.4em; */
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: var(--bs-primary);
+}
+
+/* Code cell output */
+.cell-output {
+  background-color: transparent;
+  /* color: #0d6efd; // blue */
+  border: none; //1px solid $gray-800;
+  /* border-radius: 4px; */
+  padding: 0;
+  /* padding-bottom: 1em; */
+  margin-bottom: 1em;
+}
+
+/* Embedded Man-Page Styling */
+.container {
+  border: 1px solid $gray-800;
+  border-radius: 4px;
+  background: lighten($body-bg, 5%);
+}
+
+table, tr, th, td {
+  border: none;
+}
+
+.callout-body {
+  background: lighten($body-bg, 2.5%);
+}
+
+/* tab-sets */
+.tab-content {
+  background: $body-bg;
+}
+
+/* Syntax highlighting customization */
+//.sourceCode .kw { color: #007bff; } /* Keywords */
+//.sourceCode .st { color: #28a745; } /* Strings */
+//.sourceCode .dv { color: #dc3545; } /* Decimal values */
+.sourceCode .co {                   /* Comments */
+  color: $purple; 
+  font-style: italic;
+}
+//.sourceCode .fu { color: #fd7e14; } /* Functions */
+

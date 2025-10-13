@@ -1,0 +1,24 @@
+Question
+========
+Which section of an R package help file would you reference to learn the default values for a function's arguments.
+
+Answerlist
+----------
+* Description
+* Usage
+* Arguments
+* Details
+* Value
+* See Also
+* Examples
+
+Solution
+========
+Both the *Usage* and *Arguments* sections will show the default values for arguments that have default values defined.
+
+Meta-information
+================
+exname: Default Arguments Section
+extype: schoice
+exsolution: 0110000
+exshuffle: 5
