@@ -1,0 +1,24 @@
+---
+title: "Knowledge Quiz: Tutorial 2"
+---
+
+::: {.column-margin}
+
+:::: {.callout-note}
+- Click the check-mark button to check your answer.
+- Click the question-mark button to see an explanation of the solution.
+::::
+
+:::
+
+```{r quiz2}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = list(
+    "bad_question.Rmd"
+  ),
+  edir = here::here("quizzes", "second_tutorial", "questions")
+)
+```
