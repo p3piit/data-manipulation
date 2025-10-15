@@ -1,0 +1,90 @@
+---
+title: "Logical subsetting"
+---
+
+```{r, echo=FALSE}
+data(bfi, package = "psychTools")
+```
+
+
+Logical subsetting filters rows based on conditions that evaluate to `TRUE` or `FALSE`. Rows where the condition is `TRUE` are kept, and those where it is `FALSE` are removed. If a value in the condition is `NA`, it is treated as unknown and therefore excluded unless handled explicitly. This approach allows you to express complex filtering criteria in a direct and readable way.
+
+We begin by creating a logical vector that identifies participants older than 30:
+
+```{r}
+(over30 <- bfi$age > 30)
+```
+
+This command returns a vector of `TRUE` and `FALSE` values. We can easily count how many participants are over 30 and what proportion they represent in the sample:
+
+```{r}
+sum(over30)
+mean(over30)
+```
+
+We can now use this logical vector to subset the data frame, keeping only the rows where the condition is `TRUE`:
+
+```{r}
+bfi30 <- bfi[over30, ]
+```
+
+The new object `bfi30` contains only participants older than 30. We can check this by examining its dimensions and the minimum age value:
+
+```{r}
+dim(bfi30)
+min(bfi30$age)
+```
+
+Logical conditions can be combined using the operators `&` (and), `|` (or), and `!` (not). For example, to select male participants (`gender == 1`) who are younger than 50 and have at least a bachelor’s degree (`education >= 4`), while excluding missing values for education, we can define a more complex filter:
+
+```{r}
+filter <- with(bfi, age < 50 & gender == 1 & !is.na(education) & education >= 4)
+```
+
+We can see how many cases meet these criteria:
+
+```{r}
+sum(filter)
+```
+
+Then we apply the filter to the dataset:
+
+```{r}
+bfi2 <- bfi[filter, ]
+```
+
+Finally, we check that the selection worked as expected:
+
+```{r}
+nrow(bfi2)
+unique(bfi2$gender)
+max(bfi2$age)
+min(bfi2$education)
+```
+
+We can also build a quick cross-tabulation to see where the condition holds across values of a variable, which helps visually inspect the filtering logic:
+
+```{r}
+with(bfi, table(age, (gender == 1 & !is.na(education) & education >= 4)))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

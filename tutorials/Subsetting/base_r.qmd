@@ -1,0 +1,76 @@
+# ---
+title: "Subsetting in Base R"
+---
+
+Subsetting in Base R relies on simple yet powerful indexing operations that work consistently across data structures. By using brackets (`[]`, `[[]]`, and `$`), you can extract rows, columns, or individual elements from vectors, lists, and data frames. These tools form the foundation of data manipulation in R.
+
+::: {.callout-note}
+
+## bfi dataset
+
+For this tutorial, we will work with the bfi dataset, available in the psychTools package, which contains data from a personality inventory. 
+
+```{r}
+data(bfi, package = "psychTools")
+```
+
+:::
+
+## Column subsetting
+
+The `$` operator extracts a single column by name and returns it as a vector:
+
+```{r}
+bfi$age
+```
+
+The double square brackets `[[]]` can also extract a single element but are more flexible for programmatic use, for instance when the column name is stored in another variable:
+
+```{r}
+bfi[["age"]]
+```
+
+The single square brackets `[]` are the most general and versatile. They allow you to specify both rows and columns, either by numeric position or by name. The following examples all extract the column `age` in different but equivalent ways:
+
+```{r}
+bfi[ , "age"]
+bfi["age"]
+```
+
+To select specific columns, you can refer to them by index or name:
+
+```{r}
+bfi[ , c(1, 3, 5)]
+bfi[ , c("age", "gender")]
+```
+
+## Row subsetting
+
+Subsetting can also be applied to rows. The first argument inside the brackets refers to rows, and the second to columns. For example, this selects the first ten rows of the dataset:
+
+```{r}
+bfi[1:10, ]
+```
+
+You can also exclude elements by prefixing indices with a minus sign. For instance, the command below selects the first five rows but omits columns two through four:
+
+```{r}
+bfi[1:5, -(2:4)]
+```
+
+Base R includes convenient helper functions for previewing data without specifying indices directly. The `head()` function displays the first rows, while `tail()` returns the last ones:
+
+```{r}
+head(bfi, 10)
+tail(bfi, 15)
+```
+
+
+
+
+
+
+
+
+
+

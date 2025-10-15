@@ -1,0 +1,8 @@
+---
+title: "Subsetting"
+---
+
+Every dataset in R can be thought of as a collection of elements—rows, columns, and individual values—that can be accessed, modified, or extracted as needed. Subsetting is the process of selecting specific portions of a data object, whether that means isolating one variable, extracting a set of rows, or filtering observations that meet particular conditions. It is a fundamental skill for working efficiently with data, as it allows you to focus your analysis on relevant subsets without altering the original dataset.
+
+Subsetting is possible with nearly all object types in R, but it is especially important when working with data frames. It lets you target specific parts of a dataset using indices, names, or logical conditions. Understanding how to subset effectively provides the foundation for most data manipulation tasks in R.
+
