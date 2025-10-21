@@ -1,0 +1,101 @@
+---
+title: "Transforming Variables with `mutate()`"
+---
+
+```{r, echo=FALSE}
+data("bfi", package = "psychTools")
+```
+
+
+The `mutate()` function from the `dplyr` package is the main tool for computing new variables or modifying existing ones in a data frame. It makes transformations explicit and easy to read.
+
+We can use `mutate()` to create the same gender factor as we did with base R:
+
+```{r}
+library(dplyr)
+bfi <- mutate(bfi, gender = factor(gender, labels = c("male", "female")))
+```
+
+It can also perform mathematical transformations. For example, to mean-center the variable `age`:
+
+```{r}
+bfi <- mutate(bfi, age_c = age - mean(age))
+head(bfi)
+```
+
+And to standardize `age` (i.e., convert it to z-scores) and turn `education` into a labeled factor:
+
+```{r}
+bfi <- mutate(bfi,
+              age_std = scale(age)[ , 1],
+              education = factor(education,
+                                 labels = c("some high school",
+                                            "high school graduate",
+                                            "some college",
+                                            "college graduate",
+                                            "graduate degree"))
+              )
+str(bfi)
+```
+
+These transformations make variables more interpretable and comparable across scales.
+
+```{webr-r}
+#| autorun: true
+#| context: setup
+data("bfi", package = "psychTools")
+```
+
+::: practice
+
+## Practice
+
+
+Modify the factor levels of the 'education' factor we just created. Replace all of the spaces with underscores, "_". 
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+## {{< var tab_title.hint >}}
+
+HINT 1: The `levels()` function can also be used to re-assign factor levels.
+
+HINT 2: If you want to be fancy, check out the `gsub()` function.
+
+
+## {{< var tab_title.solution >}}
+
+```{r}
+# Transform education factor levels to replace spaces with underscores
+levels(bfi$education) <-  c("some_high_school","high_school_graduate", "some_college",  "college_graduate", "graduate_degree")
+
+# Alternatively, using levels() and gsub():
+levels(bfi$education) <- gsub(" ", "_", levels(bfi$education))
+```
+::::
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

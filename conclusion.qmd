@@ -11,13 +11,15 @@ format:
 source(here::here("R", "buttons.R"))
 ```
 
-Use this page to provide some kind of brief wrap-up.
+By completing this module, you’ve developed a strong understanding of how to modify data in R—an essential step in preparing any dataset for analysis. You’ve learned how to subset data to focus on relevant observations, sort values to uncover patterns, and transform variables to make them meaningful and analysis-ready. You now have the tools to organize, refine, and structure data efficiently.
+
+Now you can take raw, unstructured data and shape it into a clean, organized format suitable for visualization, modeling, and reporting.
 
 ## Next Steps
 
-If your module feeds naturally into another, link that module through the button below as a suggestion for further study.
+Now that you know how to clean, organize, and transform your data, it’s time to make your R code more powerful and efficient. In the next module, you’ll learn how to create your own functions, combine them into larger workflows, and use pipes to make your code easier to read. These tools will help you work faster, write cleaner code, and automate the repetitive parts of your analysis.
 
-- Here, we're linking to the *First Steps* module.
+- Here, we're linking to the *Functions Advanced* module.
 
 ```{r}
 #| echo: false

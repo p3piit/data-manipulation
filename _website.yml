@@ -33,23 +33,24 @@ website:
       - section: tutorials/Subsetting/index.qmd
         text: "Subsetting"
         contents:
-        - href: tutorials/Subsetting/topic1.qmd
-        - href: tutorials/Subsetting/topic2.qmd
-        - href: tutorials/Subsetting/topic3.qmd
+        - href: tutorials/Subsetting/base_r.qmd
+        - href: tutorials/Subsetting/logic.qmd
+        - href: tutorials/Subsetting/dplyr.qmd
         - href: quizzes/Subsetting/index.qmd
           text: "Knowledge Quiz"
       - section: tutorials/Sorting/index.qmd
         text: "Sorting"
         contents:
-          - href: tutorials/Sorting/topic1.qmd
-          - href: tutorials/Sorting/topic2.qmd
+          - href: tutorials/Sorting/sorting_data.qmd
           - href: quizzes/Sorting/index.qmd
             text: "Knowledge Quiz"
       - section: tutorials/Transformation/index.qmd
         text: "Transformation"
         contents:
-          - href: tutorials/Transformation/topic1.qmd
-          - href: tutorials/Transformation/topic2.qmd
+          - href: tutorials/Transformation/char_to_vec.qmd
+          - href: tutorials/Transformation/mutate.qmd
+          - href: tutorials/Transformation/mult_var.qmd
+          - href: tutorials/Transformation/cond_and_rename.qmd
           - href: quizzes/Transformation/index.qmd
             text: "Knowledge Quiz"
       - href: conclusion.qmd

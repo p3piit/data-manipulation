@@ -1,5 +1,5 @@
 ---
-title: "Module Template"
+title: "Data Modification"
 page-navigation: false
 format:
   html: 
@@ -10,33 +10,41 @@ format:
 source(here::here("R", "buttons.R"))
 ```
 
-Welcome to our template module. Every module comprises a series of topical *tutorials*, such as the three linked below.
+Welcome to our module about data modification. Data rarely arrive in a perfect, ready-to-analyze form. Instead, they must be filtered, sorted, and transformed so that patterns become visible and variables take on meaningful structure. 
 
-1. [First Topic](/tutorials/first_tutorial/index.qmd)
-1. [Second Topic](/tutorials/second_tutorial/index.qmd)
+1. [Subsetting](/tutorials/Subsetting/index.qmd)
+2. [Sorting](/tutorials/Sorting/index.qmd)
+3. [Transforming data](/tutorials/Transformation/index.qmd)
 
-Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout. Each tutorial
-section should be wrapped up with a knowledge quiz.
+Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout.
 
 ## Learning Goals
 
 After completing this module, you will be able to:
 
-### Tutorial 1
+### Subsetting Data
 
-1. A thing you should learn from Tutorial 1.
-1. Another thing you should learn from Tutorial 1.
-1. One more thing you should learn From Tutorial 1.
+1. Extract specific rows, columns, and elements from datasets using Base R and `dplyr`.
+2. Apply logical conditions to filter data efficiently.
+3. Use tools like `filter()` and `select()` to subset data clearly and reproducibly.
 
-### Tutorial 2
+### Sorting Data
 
-1. A thing you should learn from Tutorial 2.
-1. Another thing you should learn from Tutorial 2.
+1. Reorder values or rows in ascending or descending order.
+2. Use `dplyr::arrange()` to sort data frames by one or more variables.
+
+### Transforming Data
+
+1. Convert variables into factors with defined levels.
+2. Create, modify, and standardize variables using `mutate()`.
+3. Apply operations across multiple columns with `across()`.
+4. Build new variables conditionally using `case_when()`.
+5. Rename variables programmatically using `rename()` and `rename_with()`.
 
 Click the button below to get started with the first tutorial.
 
 ```{r}
 #| echo: false
 #| results: asis
-begin_button("/tutorials/first_tutorial/index.html")
+begin_button("/tutorials/Subsetting/index.html")
 ```

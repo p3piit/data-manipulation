@@ -19,6 +19,6 @@ exams2forms::exams2forms(
   file = list(
     "bad_question.Rmd"
   ),
-  edir = here::here("quizzes", "second_tutorial", "questions")
+  edir = here::here("quizzes", "Transformation", "questions")
 )
 ```

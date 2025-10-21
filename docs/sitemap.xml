@@ -1,23 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Transformation/index.html</loc>
+    <lastmod>2025-10-21T09:33:52.475Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Transformation/cond_and_rename.html</loc>
+    <lastmod>2025-10-21T10:35:37.533Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/base_r.html</loc>
+    <lastmod>2025-10-21T08:50:15.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/logic.html</loc>
+    <lastmod>2025-10-21T09:03:32.545Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Sorting/sorting_data.html</loc>
+    <lastmod>2025-10-21T11:06:32.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/index.html</loc>
+    <lastmod>2025-10-21T10:47:15.573Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/in_progress.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/questions/default_arguments1.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/index.html</loc>
+    <lastmod>2025-10-21T11:04:33.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/bad_question.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/default_arguments2.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/arithmetic2.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/logical.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/index.html</loc>
+    <lastmod>2025-10-21T11:03:48.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/default_arguments1.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/questions/bad_question.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/index.html</loc>
+    <lastmod>2025-10-21T11:04:10.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/conclusion.html</loc>
+    <lastmod>2025-10-21T10:55:53.750Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Sorting/index.html</loc>
+    <lastmod>2025-10-21T09:19:50.230Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/dplyr.html</loc>
+    <lastmod>2025-10-21T09:08:39.326Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/index.html</loc>
     <lastmod>2025-10-14T10:07:07.431Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/topic1.html</loc>
-    <lastmod>2025-10-14T10:05:57.521Z</lastmod>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Transformation/char_to_vec.html</loc>
+    <lastmod>2025-10-21T09:38:04.462Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/base_r.html</loc>
-    <lastmod>2025-10-15T08:30:29.146Z</lastmod>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Transformation/mutate.html</loc>
+    <lastmod>2025-10-21T10:18:50.805Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/logic.html</loc>
-    <lastmod>2025-10-15T09:20:20.776Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/topic3.html</loc>
-    <lastmod>2025-10-15T09:39:37.905Z</lastmod>
+    <loc>https://www.openstatprog.com/data-manipulation/tutorials/Transformation/mult_var.html</loc>
+    <lastmod>2025-10-21T10:18:52.331Z</lastmod>
   </url>
 </urlset>

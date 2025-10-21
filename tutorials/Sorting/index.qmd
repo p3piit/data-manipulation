@@ -1,13 +1,5 @@
 ---
-title: "Second Tutorial"
+title: "Sorting"
 ---
 
-This is the landing page for the second tutorial.
-
-## Blah
-
-{{< lipsum 1 >}}
-
-### Blah, Blah
-
-{{< lipsum 2 >}}
+Sorting is a fundamental step in data analysis because it helps bring structure and clarity to your data. By ordering values or rows based on specific variables, you can quickly identify patterns, locate minimum and maximum values, and make comparisons more intuitive. Well-sorted data is easier to interpret, summarize, and present.

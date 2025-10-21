@@ -1,0 +1,99 @@
+---
+title: "Sorting Data"
+---
+
+Sorting is one of the simplest but most common operations in data analysis. It allows us to reorder values or rows based on one or more variables, which makes it easier to inspect data, identify extremes, and prepare results for presentation or further processing.
+
+## Sorting Vectors with Base R
+
+In base R, the `sort()` function reorders the elements of a vector from smallest to largest by default.
+
+```{r}
+(x <- runif(6))
+sort(x)
+```
+
+The decreasing argument reverses the order, producing a descending sort:
+
+```{r}
+sort(x, decreasing = TRUE)
+```
+
+## Sorting Data Frames with `dplyr`
+
+When working with data frames, sorting becomes a bit more complex because it involves ordering entire rows based on one or more columns. While base R provides the `order()` function for this purpose, it can be cumbersome to use. The `dplyr` package simplifies this task with the `arrange()` function, which offers an intuitive and readable syntax.
+
+Let’s start with a simple data frame:
+
+```{r}
+library(dplyr) # load the dplyr package
+(y <- data.frame(x1 = 1:10, x2 = c(-1, 1), x3 = runif(10)))
+```
+
+
+To sort the rows by a single variable, we use `arrange()` and specify the column:
+
+```{r}
+arrange(y, x3)
+```
+
+This arranges the rows of `y` in ascending order of `x3`. To sort in descending order, we prefix the variable with a minus sign:
+
+```{r}
+arrange(y, -x3)
+```
+
+`arrange()` can also handle multiple sorting variables. When multiple columns are listed, sorting proceeds in the order they appear. For example, the command below first sorts by `x2` and then by `x3` within each `x2` group:
+
+```{r}
+arrange(y, x2, x3)
+```
+
+If we want the second variable to be sorted in descending order, we add a minus sign before it:
+
+```{r}
+arrange(y, x2, -x3)
+```
+
+```{webr-r}
+#| autorun: true
+#| context: setup
+data("bfi", package = "psychTools")
+```
+
+::: practice
+
+## Practice
+
+a) Use the `dplyr` functions to sort the `bfi` data on descending order of `age` and ascending order of `gender`.
+b) Sort `age` within levels of `gender`
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+data("bfi", package = "psychTools")
+
+# a)
+bfi %>%
+  arrange(-age)
+
+bfi %>%
+  arrange(gender)
+
+# b)
+bfi %>%
+  arrange(gender, age)
+```
+::::
+
+:::
+
+
+

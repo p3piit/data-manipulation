@@ -21,6 +21,6 @@ exams2forms::exams2forms(
     "arithmetic2.Rmd",
     "default_arguments2.Rmd"
   ),
-  edir = here::here("quizzes", "first_tutorial", "questions")
+  edir = here::here("quizzes", "Sorting", "questions")
 )
 ```

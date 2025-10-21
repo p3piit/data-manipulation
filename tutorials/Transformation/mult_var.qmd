@@ -1,0 +1,81 @@
+---
+title: "Applying Operations Across Multiple Variables"
+---
+
+```{r, echo=FALSE}
+data("bfi", package = "psychTools") 
+```
+
+
+When you need to apply the same transformation to many variables, the `across()` function helps avoid repetition. For example, we can compute average scores across sets of items representing five personality traits:
+
+```{r}
+library(dplyr) # load dplyr package
+tmp <- mutate(bfi,
+              agree = rowMeans(across(A1:A5), na.rm = TRUE),
+              consc = rowMeans(across(C1:C5), na.rm = TRUE),
+              extra = rowMeans(across(E1:E5), na.rm = TRUE),
+              neuro = rowMeans(across(N1:N5), na.rm = TRUE),
+              open  = rowMeans(across(O1:O5), na.rm = TRUE))
+head(tmp)
+```
+
+If some items are reverse-coded, we need to adjust them before computing the scores. The `psych` package provides a convenient function, `scoreItems()`, which handles this automatically using predefined keys that describe how items should be scored.
+
+```{r}
+library(psych) # load psych package
+bfi.keys
+names(bfi.keys) <- c("agree", "consc", "extra", "neuro", "open")
+tmp <- scoreItems(keys = bfi.keys, items = bfi, impute = "none")
+scores <- scoreVeryFast(keys = bfi.keys, items = bfi)
+bfi <- data.frame(bfi, scores)
+head(bfi)
+
+```
+
+We can then apply additional transformations, such as taking the square root of all items starting with “A” or “E”:
+
+```{r}
+bfi <- mutate(bfi,
+              across(starts_with(c("A", "E"), ignore.case = FALSE),
+                     sqrt,
+                     .names = "{.col}_sqrt"))
+head(bfi)
+```
+
+```{webr-r}
+#| autorun: true
+#| context: setup
+data("bfi", package = "psychTools")
+```
+
+::: practice
+
+## Practice
+
+Use the `dplyr::mutate()` function to create standardized versions of the five scales scores we just created.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+
+## {{< var tab_title.solution >}}
+
+```{r}
+bfi <- mutate(bfi,
+              agree_z = (agree - mean(agree, na.rm = TRUE)) / sd(agree, na.rm = TRUE),
+              consc_z = (consc - mean(consc, na.rm = TRUE)) / sd(consc, na.rm = TRUE),
+              extra_z = (extra - mean(extra, na.rm = TRUE)) / sd(extra, na.rm = TRUE),
+              neuro_z = (neuro - mean(neuro, na.rm = TRUE)) / sd(neuro, na.rm = TRUE),
+              open_z  = (open  - mean(open,  na.rm = TRUE)) / sd(open,  na.rm = TRUE))
+```
+::::
+
+:::
+
+
+

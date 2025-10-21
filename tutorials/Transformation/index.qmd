@@ -1,14 +1,7 @@
 ---
-title: "First Tutorial"
+title: "Transformation"
 ---
 
-This is the landing page for the first tutorial. Each tutorial section should begin with a landing page named "index.qmd".
+Data transformation is the process of modifying variables to make them more useful for analysis. This can include changing variable types, creating new variables, combining existing ones, or standardizing values. Transformations help prepare data for modeling, simplify interpretation, and often make relationships in the data clearer.
 
-- Use the landing page to provide a general overview of the tutorial topics.
-- Each tutorial can cover several specific topics.
-   - Separate these low-level substantive topics across subsection scripts.
-
-## Headings
-
-The title field of each QMD source file is typeset as a Level 1 heading, so use Level-2 headings as the highest heading
-level in your markdown.
+In R, transformations can be performed using base functions or with tools from dplyr, which provide more concise and readable syntax.

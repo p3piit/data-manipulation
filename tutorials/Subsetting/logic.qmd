@@ -6,6 +6,11 @@ title: "Logical subsetting"
 data(bfi, package = "psychTools")
 ```
 
+```{webr-r}
+#| autorun: true
+#| context: setup
+data(bfi, package = "psychTools")
+```
 
 Logical subsetting filters rows based on conditions that evaluate to `TRUE` or `FALSE`. Rows where the condition is `TRUE` are kept, and those where it is `FALSE` are removed. If a value in the condition is `NA`, it is treated as unknown and therefore excluded unless handled explicitly. This approach allows you to express complex filtering criteria in a direct and readable way.
 
@@ -68,6 +73,32 @@ We can also build a quick cross-tabulation to see where the condition holds acro
 with(bfi, table(age, (gender == 1 & !is.na(education) & education >= 4)))
 ```
 
+
+::: practice
+
+## Practice
+
+Use base R logic subsetting procedures to select the five neuroticism items for female minors out of the `bfi` data.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+## {{< var tab_title.hint >}}
+
+Remember that if you want more information about the variables in the `bfi` dataset, you can check the documentation by running `?bfi` in the R console.
+
+## {{< var tab_title.solution >}}
+
+```{r}
+bfi[bfi$gender == 2 & bfi$age < 18, c("N1", "N2", "N3", "N4", "N5")]
+```
+::::
+
+:::
 
 
 
