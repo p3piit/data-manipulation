@@ -43,9 +43,10 @@ These transformations make variables more interpretable and comparable across sc
 ```{webr-r}
 #| autorun: true
 #| context: setup
-data("bfi", package = "psychTools")
+library(psychTools)
+library(dplyr)
+data(bfi, package = "psychTools")
 ```
-
 ::: practice
 
 ## Practice

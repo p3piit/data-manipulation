@@ -26,7 +26,6 @@ If some items are reverse-coded, we need to adjust them before computing the sco
 library(psych) # load psych package
 bfi.keys
 names(bfi.keys) <- c("agree", "consc", "extra", "neuro", "open")
-tmp <- scoreItems(keys = bfi.keys, items = bfi, impute = "none")
 scores <- scoreVeryFast(keys = bfi.keys, items = bfi)
 bfi <- data.frame(bfi, scores)
 head(bfi)
@@ -46,7 +45,9 @@ head(bfi)
 ```{webr-r}
 #| autorun: true
 #| context: setup
-data("bfi", package = "psychTools")
+library(psychTools)
+library(dplyr)
+data(bfi, package = "psychTools")
 ```
 
 ::: practice

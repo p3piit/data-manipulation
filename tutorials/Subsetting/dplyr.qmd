@@ -2,12 +2,6 @@
 title: "Subsetting with `dplyr`"
 ---
 
-```{webr-r}
-#| autorun: true
-#| context: setup
-data(bfi, package = "psychTools")
-```
-
 While Base R subsetting is powerful and flexible, the `dplyr` package provides a more readable and expressive way to manipulate data frames. As part of the tidyverse, it uses a consistent, intuitive grammar for data manipulation built around a set of “verbs.” Two of the most commonly used verbs are `filter()`, for subsetting rows based on conditions, and `select()`, for subsetting columns. These functions make code cleaner and easier to read, especially when combined with the pipe operator (`|>` or `%>%`).
 
 First of all, we make sure `dplyr` is loaded and that the bfi dataset is available:
@@ -113,6 +107,14 @@ bfi |>
 ```
 
 In just a few lines, `dplyr` allows for clear, structured data subsetting that reads like a logical sequence of steps. This simplicity and expressiveness are what make `dplyr` the best tool for most modern R workflows.
+
+```{webr-r}
+#| autorun: true
+#| context: setup
+library(psychTools)
+library(dplyr)
+data(bfi, package = "psychTools")
+```
 
 ::: practice
 

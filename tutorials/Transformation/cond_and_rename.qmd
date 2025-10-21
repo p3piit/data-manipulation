@@ -10,7 +10,6 @@ library(dplyr)
 library(psych)
 bfi <- mutate(bfi, gender = factor(gender, labels = c("male", "female")))
 names(bfi.keys) <- c("agree", "consc", "extra", "neuro", "open")
-tmp <- scoreItems(keys = bfi.keys, items = bfi, impute = "none")
 scores <- scoreVeryFast(keys = bfi.keys, items = bfi)
 bfi <- data.frame(bfi, scores)
 bfi <- mutate(bfi,
@@ -61,18 +60,32 @@ head(bfi)
 ```{webr-r}
 #| autorun: true
 #| context: setup
+library(psychTools)
+library(dplyr)
+library(magrittr)
 data("bfi", package = "psychTools")
 library(psych) # load psych package
 names(bfi.keys) <- c("agree", "consc", "extra", "neuro", "open")
 tmp <- scoreItems(keys = bfi.keys, items = bfi, impute = "none")
-scores <- scoreVeryFast(keys = bfi.keys, items = bfi)
-bfi <- data.frame(bfi, scores)
-bfi <- mutate(bfi,
-              agree_z = (agree - mean(agree, na.rm = TRUE)) / sd(agree, na.rm = TRUE),
-              consc_z = (consc - mean(consc, na.rm = TRUE)) / sd(consc, na.rm = TRUE),
-              extra_z = (extra - mean(extra, na.rm = TRUE)) / sd(extra, na.rm = TRUE),
-              neuro_z = (neuro - mean(neuro, na.rm = TRUE)) / sd(neuro, na.rm = TRUE),
-              open_z  = (open  - mean(open,  na.rm = TRUE)) / sd(open,  na.rm = TRUE))
+bfi <- data.frame(bfi, as.data.frame(tmp$scores)) %>%
+     mutate(
+        gender = factor(gender, labels = c("male", "female")),
+        agree_z = (agree - mean(agree, na.rm = TRUE)) / sd(agree, na.rm = TRUE),
+        consc_z = (consc - mean(consc, na.rm = TRUE)) / sd(consc, na.rm = TRUE),
+        extra_z = (extra - mean(extra, na.rm = TRUE)) / sd(extra, na.rm = TRUE),
+        neuro_z = (neuro - mean(neuro, na.rm = TRUE)) / sd(neuro, na.rm = TRUE),
+        open_z  = (open  - mean(open,  na.rm = TRUE)) / sd(open,  na.rm = TRUE),
+        gm = case_when(
+                  age < 18 & gender == "male"   ~ "boy",
+                  age < 18 & gender == "female" ~ "girl",
+                  age >= 18 & gender == "male"  ~ "man",
+                  age >= 18 & gender == "female"~ "woman",
+                  TRUE ~ NA_character_),
+        gm = as.factor(gm),
+        ) %>%
+        rename(ed = education,
+               gen = gender) %>%
+        rename_with(.fn = tolower, .cols = matches("\\d$"))
 ```
 
 ::: practice
@@ -131,7 +144,7 @@ bfi <- mutate(bfi,
 ## {{< var tab_title.editor >}}
 
 ```{webr-r}
-str(bfi)
+
 ```
 
 ## {{< var tab_title.solution >}}

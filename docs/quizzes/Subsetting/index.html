@@ -72,17 +72,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading.callout {
+  border-left-color: purple;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -93,19 +93,6 @@ div.callout-reading-advanced.callout-style-default > .callout-header {
 }
 div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: purple;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -122,6 +109,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -206,7 +206,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/Subsetting/base_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">—</span></a>
+ <span class="menu-text">Subsetting in Base R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -351,14 +351,14 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Yes or No?</p>
-<div id="webex-35eeef6567b9c3d0cec96d99577bd13c" class="webex-radiogroup" data-answer="aAVJVElWGgUaBz8=">
-<label><input type="radio" autocomplete="off" name="35eeef6567b9c3d0cec96d99577bd13c"><span>No</span></label><label><input type="radio" autocomplete="off" name="35eeef6567b9c3d0cec96d99577bd13c"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="35eeef6567b9c3d0cec96d99577bd13c"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="35eeef6567b9c3d0cec96d99577bd13c"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="35eeef6567b9c3d0cec96d99577bd13c"><span>No</span></label>
+<div id="webex-906cdb09a2ca2a745616ff41f22d85c2" class="webex-radiogroup" data-answer="YgEaU0hSHAlNAj4=">
+<label><input type="radio" autocomplete="off" name="906cdb09a2ca2a745616ff41f22d85c2"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="906cdb09a2ca2a745616ff41f22d85c2"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="906cdb09a2ca2a745616ff41f22d85c2"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="906cdb09a2ca2a745616ff41f22d85c2"><span>No</span></label><label><input type="radio" autocomplete="off" name="906cdb09a2ca2a745616ff41f22d85c2"><span>Yes</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Wrong</li>
 <li>Correct</li>
+<li>Wrong</li>
 <li>Wrong</li>
 <li>Wrong</li>
 <li>Wrong</li>

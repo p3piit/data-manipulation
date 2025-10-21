@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>base_r – Data Manipulation</title>
+<title>Subsetting in Base R – Data Manipulation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,19 +107,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -144,6 +131,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -211,7 +211,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/index.html">Subsetting</a></li><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/base_r.html">—</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/index.html">Subsetting</a></li><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/base_r.html">Subsetting in Base R</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -241,7 +241,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/Subsetting/base_r.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">—</span></a>
+ <span class="menu-text">Subsetting in Base R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -344,25 +344,33 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">—</a>
-  <ul class="collapse">
-  <li><a href="#title-subsetting-in-base-r" id="toc-title-subsetting-in-base-r" class="nav-link" data-scroll-target="#title-subsetting-in-base-r">title: “Subsetting in Base R”</a></li>
-  <li><a href="#column-subsetting" id="toc-column-subsetting" class="nav-link" data-scroll-target="#column-subsetting">Column subsetting</a></li>
+  <li><a href="#column-subsetting" id="toc-column-subsetting" class="nav-link active" data-scroll-target="#column-subsetting">Column subsetting</a></li>
   <li><a href="#row-subsetting" id="toc-row-subsetting" class="nav-link" data-scroll-target="#row-subsetting">Row subsetting</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/index.html">Subsetting</a></li><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/base_r.html">—</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/index.html">Subsetting</a></li><li class="breadcrumb-item"><a href="../../tutorials/Subsetting/base_r.html">Subsetting in Base R</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Subsetting in Base R</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="section" class="level1">
-<h1>—</h1>
-<section id="title-subsetting-in-base-r" class="level2">
-<h2 class="anchored" data-anchor-id="title-subsetting-in-base-r">title: “Subsetting in Base R”</h2>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Subsetting in Base R relies on simple yet powerful indexing operations that work consistently across data structures. By using brackets (<code>[]</code>, <code>[[]]</code>, and <code>$</code>), you can extract rows, columns, or individual elements from vectors, lists, and data frames. These tools form the foundation of data manipulation in R.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -380,7 +388,6 @@ bfi dataset
 </div>
 </div>
 </div>
-</section>
 <section id="column-subsetting" class="level2">
 <h2 class="anchored" data-anchor-id="column-subsetting">Column subsetting</h2>
 <p>The <code>$</code> operator extracts a single column by name and returns it as a vector:</p>
@@ -9281,7 +9288,6 @@ bfi dataset
 </div>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

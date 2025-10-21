@@ -58,7 +58,9 @@ arrange(y, x2, -x3)
 ```{webr-r}
 #| autorun: true
 #| context: setup
-data("bfi", package = "psychTools")
+library(psychTools)
+library(dplyr)
+data(bfi, package = "psychTools")
 ```
 
 ::: practice

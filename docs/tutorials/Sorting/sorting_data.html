@@ -406,7 +406,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"data(\"bfi\", package = \"psychTools\")","id":1,"options":{"autorun":"true","classes":"","comment":"","context":"setup","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"library(psychTools)\nlibrary(dplyr)\ndata(bfi, package = \"psychTools\")","id":1,"options":{"autorun":"true","classes":"","comment":"","context":"setup","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 </script>
 <script type="module">
@@ -1660,19 +1660,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-reading.callout {
-  border-left-color: purple;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading-advanced.callout {
   border-left-color: red;
 }
@@ -1686,17 +1673,17 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
+div.callout-reading.callout {
+  border-left-color: purple;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -1710,6 +1697,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -1794,7 +1794,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/Subsetting/base_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">—</span></a>
+ <span class="menu-text">Subsetting in Base R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -2215,18 +2215,18 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.884990567 0.605696257 0.421726307 0.873301893 0.128026480 0.004088261</code></pre>
+<pre><code>[1] 0.4745734 0.5616072 0.3389950 0.1591159 0.7727879 0.4363863</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.004088261 0.128026480 0.421726307 0.605696257 0.873301893 0.884990567</code></pre>
+<pre><code>[1] 0.1591159 0.3389950 0.4363863 0.4745734 0.5616072 0.7727879</code></pre>
 </div>
 </div>
 <p>The decreasing argument reverses the order, producing a descending sort:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(x, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.884990567 0.873301893 0.605696257 0.421726307 0.128026480 0.004088261</code></pre>
+<pre><code>[1] 0.7727879 0.5616072 0.4745734 0.4363863 0.3389950 0.1591159</code></pre>
 </div>
 </div>
 </section>
@@ -2238,85 +2238,85 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># load the dplyr package</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>(y <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">x2 =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">x3 =</span> <span class="fu">runif</span>(<span class="dv">10</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   x1 x2          x3
-1   1 -1 0.306040462
-2   2  1 0.315542067
-3   3 -1 0.726873588
-4   4  1 0.002763099
-5   5 -1 0.961739011
-6   6  1 0.590310243
-7   7 -1 0.823326051
-8   8  1 0.514072194
-9   9 -1 0.936213251
-10 10  1 0.684407389</code></pre>
+<pre><code>   x1 x2         x3
+1   1 -1 0.01058254
+2   2  1 0.42403880
+3   3 -1 0.48164580
+4   4  1 0.17129568
+5   5 -1 0.08034007
+6   6  1 0.44805708
+7   7 -1 0.84900355
+8   8  1 0.27579146
+9   9 -1 0.59431349
+10 10  1 0.95466538</code></pre>
 </div>
 </div>
 <p>To sort the rows by a single variable, we use <code>arrange()</code> and specify the column:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(y, x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   x1 x2          x3
-1   4  1 0.002763099
-2   1 -1 0.306040462
-3   2  1 0.315542067
-4   8  1 0.514072194
-5   6  1 0.590310243
-6  10  1 0.684407389
-7   3 -1 0.726873588
-8   7 -1 0.823326051
-9   9 -1 0.936213251
-10  5 -1 0.961739011</code></pre>
+<pre><code>   x1 x2         x3
+1   1 -1 0.01058254
+2   5 -1 0.08034007
+3   4  1 0.17129568
+4   8  1 0.27579146
+5   2  1 0.42403880
+6   6  1 0.44805708
+7   3 -1 0.48164580
+8   9 -1 0.59431349
+9   7 -1 0.84900355
+10 10  1 0.95466538</code></pre>
 </div>
 </div>
 <p>This arranges the rows of <code>y</code> in ascending order of <code>x3</code>. To sort in descending order, we prefix the variable with a minus sign:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(y, <span class="sc">-</span>x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   x1 x2          x3
-1   5 -1 0.961739011
-2   9 -1 0.936213251
-3   7 -1 0.823326051
-4   3 -1 0.726873588
-5  10  1 0.684407389
-6   6  1 0.590310243
-7   8  1 0.514072194
-8   2  1 0.315542067
-9   1 -1 0.306040462
-10  4  1 0.002763099</code></pre>
+<pre><code>   x1 x2         x3
+1  10  1 0.95466538
+2   7 -1 0.84900355
+3   9 -1 0.59431349
+4   3 -1 0.48164580
+5   6  1 0.44805708
+6   2  1 0.42403880
+7   8  1 0.27579146
+8   4  1 0.17129568
+9   5 -1 0.08034007
+10  1 -1 0.01058254</code></pre>
 </div>
 </div>
 <p><code>arrange()</code> can also handle multiple sorting variables. When multiple columns are listed, sorting proceeds in the order they appear. For example, the command below first sorts by <code>x2</code> and then by <code>x3</code> within each <code>x2</code> group:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(y, x2, x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   x1 x2          x3
-1   1 -1 0.306040462
-2   3 -1 0.726873588
-3   7 -1 0.823326051
-4   9 -1 0.936213251
-5   5 -1 0.961739011
-6   4  1 0.002763099
-7   2  1 0.315542067
-8   8  1 0.514072194
-9   6  1 0.590310243
-10 10  1 0.684407389</code></pre>
+<pre><code>   x1 x2         x3
+1   1 -1 0.01058254
+2   5 -1 0.08034007
+3   3 -1 0.48164580
+4   9 -1 0.59431349
+5   7 -1 0.84900355
+6   4  1 0.17129568
+7   8  1 0.27579146
+8   2  1 0.42403880
+9   6  1 0.44805708
+10 10  1 0.95466538</code></pre>
 </div>
 </div>
 <p>If we want the second variable to be sorted in descending order, we add a minus sign before it:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(y, x2, <span class="sc">-</span>x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   x1 x2          x3
-1   5 -1 0.961739011
-2   9 -1 0.936213251
-3   7 -1 0.823326051
-4   3 -1 0.726873588
-5   1 -1 0.306040462
-6  10  1 0.684407389
-7   6  1 0.590310243
-8   8  1 0.514072194
-9   2  1 0.315542067
-10  4  1 0.002763099</code></pre>
+<pre><code>   x1 x2         x3
+1   7 -1 0.84900355
+2   9 -1 0.59431349
+3   3 -1 0.48164580
+4   5 -1 0.08034007
+5   1 -1 0.01058254
+6  10  1 0.95466538
+7   6  1 0.44805708
+8   2  1 0.42403880
+9   8  1 0.27579146
+10  4  1 0.17129568</code></pre>
 </div>
 </div>
 <div id="qwebr-insertion-location-1"></div>
