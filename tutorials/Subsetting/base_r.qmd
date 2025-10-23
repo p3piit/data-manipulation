@@ -8,7 +8,7 @@ Subsetting in Base R relies on simple yet powerful indexing operations that work
 
 ## bfi dataset
 
-For this tutorial, we will work with the bfi dataset, available in the psychTools package, which contains data from a personality inventory. 
+For this tutorial, we will work with the bfi dataset, available in the psychTools package, which contains data from a personality test. 
 
 ```{r}
 data(bfi, package = "psychTools")

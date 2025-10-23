@@ -1,0 +1,40 @@
+Question
+========
+Which `dplyr` command creates a mean-centered version of age called `age_mc` in the data frame `bfi`?
+
+Answerlist
+----------
+* `bfi <- mutate(bfi, age_mc = age - mean(age))`
+* `bfi <- mutate(bfi, age_mc = age / mean(age))`
+* `bfi <- mutate(bfi, age_mc = scale(age))`
+* `bfi$age_mc <- scale(age)`
+* `bfi <- mutate(bfi, age_mc = mean(age))`
+* `bfi <- transform(bfi, age_mc = age - mean(bfi$age))`
+* `mutate(age_mc = age - mean(age))`
+* `bfi <- mutate(bfi, age = age - mean(age))`
+* `bfi <- filter(bfi, age - mean(age))`
+* `bfi <- mutate(age_mc <- age - mean(age))`
+
+
+Solution
+========
+
+Answerlist
+----------
+* TRUE. This correctly creates a mean-centered version of age.
+* FALSE. Divides by the mean, normalization, not centering.
+* FALSE. `scale()` standardizes (centers and scales), not just centers.
+* FALSE. `scale()` standardizes (centers and scales), not just centers.
+* FALSE. This assigns the mean value to all entries, not centering.
+* FALSE. Correct syntax but `mean(bfi$age)` is less common than `mean(age)` within `mutate()`.
+* FALSE. Missing the data frame to mutate.
+* FALSE. Overwrites `age` instead of creating `age_mc`.
+* FALSE. `filter()` is for subsetting rows, not creating new variables.
+* FALSE. Incorrect syntax for `mutate()`.
+
+Meta-information
+================
+exname: dplyr mean-centering
+extype: schoice
+exsolution: 1000000000
+exshuffle: 5

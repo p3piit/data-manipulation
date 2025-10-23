@@ -72,19 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -96,19 +83,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -124,37 +98,34 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
@@ -379,87 +350,39 @@ Note
 </div></div><div class="cell" data-layout-align="center">
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>Which of the following expressions will return <code>TRUE</code>?</p>
-<div id="webex-c6e9569344a452125f097ea0b76938aa" class="webex-checkboxgroup" data-answer="OAZJCRkGFQMYBU0FaA==">
-<label><input type="checkbox" autocomplete="off" name="c6e9569344a452125f097ea0b76938aa"><span><code>"alice" == "bob" &amp; "alice" == "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="c6e9569344a452125f097ea0b76938aa"><span><code>"foo" == "bar"</code></span></label><label><input type="checkbox" autocomplete="off" name="c6e9569344a452125f097ea0b76938aa"><span><code>(8 - 1) == 7 &amp; 7 &gt; (14 / 2)</code></span></label><label><input type="checkbox" autocomplete="off" name="c6e9569344a452125f097ea0b76938aa"><span><code>TRUE &amp; FALSE</code></span></label><label><input type="checkbox" autocomplete="off" name="c6e9569344a452125f097ea0b76938aa"><span><code>"foo" != "bar"</code></span></label><label><input type="checkbox" autocomplete="off" name="c6e9569344a452125f097ea0b76938aa"><span><code>(8 + 6) &lt; (8 * 6)</code></span></label>
+<p>Which command sorts the numeric vector <code>x</code> in descending order using only base R?</p>
+<div id="webex-0db5bc9880dd2f80c06b710bb66509b0" class="webex-radiogroup" data-answer="a1ROBU5TFQkUADk=">
+<label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(x)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(-x)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(x, reverse = TRUE)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(x, decreasing = TRUE)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>x[sort(x)]</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>FALSE: “alice” is not equal to “bob”</li>
-<li>FALSE: “foo” is not equal to “bar”</li>
-<li>FALSE: 7 is equal to 7, but 7 is not strictly greater than 7</li>
-<li>FALSE: Trivially</li>
-<li>TRUE: “foo” is not equal to “bar”</li>
-<li>TRUE: 14 is strictly less than 48</li>
+<li>FALSE. <code>sort(x)</code> sorts in ascending order by default.</li>
+<li>FALSE. <code>sort(-x)</code> sorts the negated values of <code>x</code>, which does not yield the correct descending order of <code>x</code>.</li>
+<li>FALSE. <code>sort(x, reverse = TRUE)</code> is not a valid argument in the <code>sort</code> function.</li>
+<li>TRUE. <code>sort(x, decreasing = TRUE)</code> correctly sorts <code>x</code> in descending order.</li>
+<li>FALSE. <code>x[sort(x)]</code> does not sort <code>x</code> in descending order; it returns elements of <code>x</code> at the positions given by sorting <code>x</code>.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>What is the value of <span class="math inline">\(x\)</span> in the following equation?</p>
-<p><span class="math display">\[
-x = \frac{2 + 3}{1}
-\]</span></p>
-<p>Round your answer to two decimal places.</p>
-<p><input class="webex-solveme nospaces" id="webex-83ae14457dbdac13cbfdadfe1ce4f2f4" data-tol="0.01" size="20" data-answer="YxFUR2w="></p>
+<p>Suppose you have</p>
+<div class="cell" data-layout-align="center">
+<p><code>{. .cell-code} y &lt;- data.frame(x1 = 1:10, x2 = c(-1, 1), x3 = runif(10))</code></p>
 </div>
-<div class="webex-solution">
-<p>After rounding, we get 5.00.</p>
-</div>
-</div>
-<div class="webex-question">
-<div class="webex-check webex-box">
-<p>Use the following help file excerpt to answer the question below.</p>
-<div class="cell" data-layout-align="center" data-printr.help.sections="usage">
-<div class="cell-output-display">
-<div class="r-help-page"><div class="container"><main>
-
-
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td>cor</td>
-<td style="text-align: right;">R Documentation</td>
-</tr>
-</tbody>
-</table>
-
-
-<h2 class="anchored">Correlation, Variance and Covariance (Matrices)</h2>
-
-<h3 class="anchored">Usage</h3>
-
-<pre><code class="language-R">var(x, y = NULL, na.rm = FALSE, use)
-
-cov(x, y = NULL, use = "everything",
-    method = c("pearson", "kendall", "spearman"))
-
-cor(x, y = NULL, use = "everything",
-    method = c("pearson", "kendall", "spearman"))
-
-cov2cor(V)
-</code></pre>
-
-</main>
-
-</div>
-</div>
-</div>
-</div>
-<p>What is the default value for the <code>use</code> argument of the <code>cor()</code> function?</p>
-<div id="webex-28fe7f9d0ac1763e4c3047c266fee168" class="webex-radiogroup" data-answer="aQhKVBtWFVQcUT4=">
-<label><input type="radio" autocomplete="off" name="28fe7f9d0ac1763e4c3047c266fee168"><span><code>method</code></span></label><label><input type="radio" autocomplete="off" name="28fe7f9d0ac1763e4c3047c266fee168"><span><code>"everything"</code></span></label><label><input type="radio" autocomplete="off" name="28fe7f9d0ac1763e4c3047c266fee168"><span><code>"kendall"</code></span></label><label><input type="radio" autocomplete="off" name="28fe7f9d0ac1763e4c3047c266fee168"><span><code>"Everything</code></span></label><label><input type="radio" autocomplete="off" name="28fe7f9d0ac1763e4c3047c266fee168"><span><code>"spearman"</code></span></label>
+<p>Which of the following commands sort the rows by <code>x3</code> in ascending order (same result, possibly using different syntaxes)?</p>
+<div id="webex-6caf06c288df0d876a5447d9a5b99bb9" class="webex-checkboxgroup" data-answer="bVNNVxwGTwIUCTk=">
+<label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>y[order(x3), ]</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>y[order(y$x3), ]</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>arrange(y, desc(x3))</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>sort(y$x3)</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>y |&gt; arrange(x3)</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
-<p>The default value for the <code>use</code> argument is <code>"everything"</code>.</p>
 <ul>
-<li>Wrong: This is an argument name</li>
-<li>Correct</li>
-<li>Wrong: This is one of the possible methods</li>
-<li>Wrong: The “E” should be lowercase</li>
-<li>Wrong: This is one of the possible methods</li>
+<li>FALSE. <code>y[order(x3), ]</code> will result in an error because <code>x3</code> is not defined in the global environment; it needs to be referenced as <code>y$x3</code>.</li>
+<li>TRUE. <code>y[order(y$x3), ]</code> sorts the rows of <code>y</code> based on the values in <code>x3</code> in ascending order.</li>
+<li>FALSE. <code>arrange(y, desc(x3))</code> sorts <code>y</code> by <code>x3</code> in descending order, which is not what we want.</li>
+<li>FALSE. <code>sort(y$x3)</code> returns a sorted vector of <code>x3</code> values, but does not sort the rows of the data frame <code>y</code>.</li>
+<li>TRUE. <code>y |&gt; arrange(x3)</code> uses the pipe operator to sort <code>y</code> by <code>x3</code> in ascending order.</li>
 </ul>
 </div>
 </div>

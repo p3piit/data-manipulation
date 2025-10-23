@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/base_r.html</loc>
-    <lastmod>2025-10-21T12:51:19.900Z</lastmod>
+    <lastmod>2025-10-23T08:54:23.050Z</lastmod>
   </url>
   <url>
     <loc>https://www.openstatprog.com/data-manipulation/tutorials/Subsetting/logic.html</loc>
@@ -33,40 +33,60 @@
     <lastmod>2025-10-13T18:09:36.581Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/index.html</loc>
-    <lastmod>2025-10-21T11:04:33.045Z</lastmod>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/questions/across.html</loc>
+    <lastmod>2025-10-23T12:19:39.857Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/bad_question.html</loc>
-    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/default_arguments2.html</loc>
-    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/arithmetic2.html</loc>
-    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/logical.html</loc>
-    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/index.html</loc>
-    <lastmod>2025-10-21T11:03:48.181Z</lastmod>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/questions/rename.html</loc>
+    <lastmod>2025-10-23T12:47:34.509Z</lastmod>
   </url>
   <url>
     <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/default_arguments1.html</loc>
     <lastmod>2025-10-13T18:09:36.581Z</lastmod>
   </url>
   <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/base_r.html</loc>
+    <lastmod>2025-10-23T10:00:33.019Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/dyplr.html</loc>
+    <lastmod>2025-10-23T11:06:53.861Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/array.html</loc>
+    <lastmod>2025-10-23T11:40:25.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/questions/base_r.html</loc>
+    <lastmod>2025-10-23T11:33:05.630Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Sorting/index.html</loc>
+    <lastmod>2025-10-23T11:41:04.154Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/bad_question.html</loc>
+    <lastmod>2025-10-13T18:09:36.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/questions/logic.html</loc>
+    <lastmod>2025-10-23T12:53:59.237Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Subsetting/index.html</loc>
+    <lastmod>2025-10-23T12:50:52.266Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/questions/bad_question.html</loc>
     <lastmod>2025-10-13T18:09:36.581Z</lastmod>
   </url>
   <url>
+    <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/questions/mean_centering.html</loc>
+    <lastmod>2025-10-23T11:54:56.332Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.openstatprog.com/data-manipulation/quizzes/Transformation/index.html</loc>
-    <lastmod>2025-10-21T11:04:10.891Z</lastmod>
+    <lastmod>2025-10-23T12:48:37.330Z</lastmod>
   </url>
   <url>
     <loc>https://www.openstatprog.com/data-manipulation/conclusion.html</loc>

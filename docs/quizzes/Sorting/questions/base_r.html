@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>default_arguments2 – Data Manipulation</title>
+<title>base_r – Data Manipulation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,17 +70,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -96,17 +96,17 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -327,84 +327,40 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 <section id="question" class="level1">
 <h1>Question</h1>
-<p>Use the following help file excerpt to answer the question below.</p>
-<div class="cell" data-layout-align="center" data-printr.help.sections="usage">
-<div class="cell-output-display">
-<div class="r-help-page"><div class="container"><main>
-
-
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td>cor</td>
-<td style="text-align: right;">R Documentation</td>
-</tr>
-</tbody>
-</table>
-
-
-<h2 class="anchored" data-anchor-id="question">Correlation, Variance and Covariance (Matrices)</h2>
-
-<h3 class="anchored">Usage</h3>
-
-<pre><code class="language-R">var(x, y = NULL, na.rm = FALSE, use)
-
-cov(x, y = NULL, use = "everything",
-    method = c("pearson", "kendall", "spearman"))
-
-cor(x, y = NULL, use = "everything",
-    method = c("pearson", "kendall", "spearman"))
-
-cov2cor(V)
-</code></pre>
-
-</main>
-
-</div>
-</div>
-</div>
-</div>
-<p>What is the default value for the <code>use</code> argument of the <code>cor()</code> function?</p>
+<p>Which command sorts the numeric vector <code>x</code> in descending order using only base R?</p>
 <section id="answerlist" class="level2">
 <h2 class="anchored" data-anchor-id="answerlist">Answerlist</h2>
 <ul>
-<li><code>"everything"</code></li>
-<li><code>"Everything</code></li>
-<li><code>"spearman"</code></li>
-<li><code>"pearson"</code></li>
-<li><code>"kendall"</code></li>
-<li><code>c("pearson", "spearman", "kendall")</code></li>
-<li><code>NULL</code></li>
-<li><code>method</code></li>
-<li><code>y</code></li>
-<li><code>x</code></li>
-<li>The <code>use</code> argument does not have a defined default value.</li>
+<li><code>sort(x, decreasing = TRUE)</code></li>
+<li><code>sort(x)</code></li>
+<li><code>order(x, decreasing = TRUE)</code></li>
+<li><code>x[sort(x)]</code></li>
+<li><code>sort(x, reverse = TRUE)</code></li>
+<li><code>arrange(x, desc())</code></li>
+<li><code>sort(-x)</code></li>
+<li><code>sort(x, decreasing = FALSE)</code></li>
 </ul>
 </section>
 </section>
 <section id="solution" class="level1">
 <h1>Solution</h1>
-<p>The default value for the <code>use</code> argument is <code>"everything"</code>.</p>
 <section id="answerlist-1" class="level2">
 <h2 class="anchored" data-anchor-id="answerlist-1">Answerlist</h2>
 <ul>
-<li>Correct</li>
-<li>Wrong: The “E” should be lowercase</li>
-<li>Wrong: This is one of the possible methods</li>
-<li>Wrong: This is one of the possible methods</li>
-<li>Wrong: This is one of the possible methods</li>
-<li>Wrong: These are all of the possible methods</li>
-<li>Wrong: This is the default value for <code>y</code></li>
-<li>Wrong: This is an argument name</li>
-<li>Wrong: This is an argument name</li>
-<li>Wrong: This is an argument name</li>
-<li>Wrong: There is a default value defined for <code>use</code>.</li>
+<li>TRUE. <code>sort(x, decreasing = TRUE)</code> correctly sorts <code>x</code> in descending order.</li>
+<li>FALSE. <code>sort(x)</code> sorts in ascending order by default.</li>
+<li>FALSE. <code>order(x, decreasing = TRUE)</code> returns the indices that would sort <code>x</code> in descending order, not the sorted vector itself.</li>
+<li>FALSE. <code>x[sort(x)]</code> does not sort <code>x</code> in descending order; it returns elements of <code>x</code> at the positions given by sorting <code>x</code>.</li>
+<li>FALSE. <code>sort(x, reverse = TRUE)</code> is not a valid argument in the <code>sort</code> function.</li>
+<li>FALSE. <code>arrange(x, desc())</code> is from the dplyr package, but more importantly, <code>arrange</code> is used for data frames, not vectors.</li>
+<li>FALSE. <code>sort(-x)</code> sorts the negated values of <code>x</code>, which does not yield the correct descending order of <code>x</code>.</li>
+<li>FALSE: <code>sort(x, decreasing = FALSE)</code> sorts in ascending order.</li>
 </ul>
 </section>
 </section>
 <section id="meta-information" class="level1">
 <h1>Meta-information</h1>
-<p>exname: Default Arguments Selection extype: schoice exsolution: 10000000000 exshuffle: 5</p>
+<p>exname: Logical Comparisons extype: schoice exsolution: 10000000 exshuffle: 5</p>
 
 
 </section>

@@ -1,0 +1,35 @@
+Question
+========
+Which command sorts the numeric vector `x` in descending order using only base R?
+
+Answerlist
+----------
+* `sort(x, decreasing = TRUE)`
+* `sort(x)`
+* `order(x, decreasing = TRUE)`
+* `x[sort(x)]`
+* `sort(x, reverse = TRUE)`
+* `arrange(x, desc())`
+* `sort(-x)`
+* `sort(x, decreasing = FALSE)`
+
+Solution
+========
+
+Answerlist
+----------
+* TRUE. `sort(x, decreasing = TRUE)` correctly sorts `x` in descending order.
+* FALSE. `sort(x)` sorts in ascending order by default.
+* FALSE. `order(x, decreasing = TRUE)` returns the indices that would sort `x` in descending order, not the sorted vector itself.
+* FALSE. `x[sort(x)]` does not sort `x` in descending order; it returns elements of `x` at the positions given by sorting `x`.
+* FALSE. `sort(x, reverse = TRUE)` is not a valid argument in the `sort` function.
+* FALSE. `arrange(x, desc())` is from the dplyr package, but more importantly, `arrange` is used for data frames, not vectors.
+* FALSE. `sort(-x)` sorts the negated values of `x`, which does not yield the correct descending order of `x`.
+* FALSE: `sort(x, decreasing = FALSE)` sorts in ascending order.
+
+Meta-information
+================
+exname: Logical Comparisons
+extype: schoice
+exsolution: 10000000
+exshuffle: 5

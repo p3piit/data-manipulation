@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>arithmetic2 – Data Manipulation</title>
+<title>across – Data Manipulation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,19 +96,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -122,37 +109,21 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../html/webex.css">
 </head>
@@ -336,8 +307,14 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question">Question</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question">Question</a>
+  <ul class="collapse">
+  <li><a href="#answerlist" id="toc-answerlist" class="nav-link" data-scroll-target="#answerlist">Answerlist</a></li>
+  </ul></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a>
+  <ul class="collapse">
+  <li><a href="#answerlist-1" id="toc-answerlist-1" class="nav-link" data-scroll-target="#answerlist-1">Answerlist</a></li>
+  </ul></li>
   <li><a href="#meta-information" id="toc-meta-information" class="nav-link" data-scroll-target="#meta-information">Meta-information</a></li>
   </ul>
 </nav>
@@ -350,19 +327,40 @@ window.Quarto = {
 
 <section id="question" class="level1">
 <h1>Question</h1>
-<p>What is the value of <span class="math inline">\(x\)</span> in the following equation?</p>
-<p><span class="math display">\[
-x = \frac{5 + 2}{1}
-\]</span></p>
-<p>Round your answer to two decimal places.</p>
+<p>Which of the following use <code>across()</code> correctly to compute row means for all items from <code>"A1"</code> to <code>"A5"</code> and store the result in a new variable <code>agree</code>?</p>
+<section id="answerlist" class="level2">
+<h2 class="anchored" data-anchor-id="answerlist">Answerlist</h2>
+<ul>
+<li><code>mutate(bfi, agree = rowMeans(across(A1:A5), na.rm = TRUE))</code></li>
+<li><code>bfi &lt;- mutate(bfi, agree = rowMeans(across(A1:A5), na.rm = TRUE))</code></li>
+<li><code>mutate(bfi, agree = rowMeans(across(c(A1:A5)), na.rm = TRUE))</code></li>
+<li><code>mutate(bfi, agree = rowMeans(A1:A5, na.rm = TRUE))</code></li>
+<li><code>mutate(bfi, agree = across(A1:A5, rowMeans, na.rm = TRUE))</code></li>
+<li><code>mutate(bfi, agree = rowMeans(across(A1:A5))) |&gt; head()</code></li>
+<li><code>bfi &lt;- mutate(bfi, agree = across(A1:A5, rowMeans))</code></li>
+<li><code>mutate(bfi, agree = rowMeans(bfi[A1:A5], na.rm = TRUE))</code></li>
+</ul>
+</section>
 </section>
 <section id="solution" class="level1">
 <h1>Solution</h1>
-<p>After rounding, we get 7.00.</p>
+<section id="answerlist-1" class="level2">
+<h2 class="anchored" data-anchor-id="answerlist-1">Answerlist</h2>
+<ul>
+<li>TRUE. This is the correct way to use <code>across()</code> to select columns <code>A1</code> to <code>A5</code> and compute their row means while handling <code>NA</code> values.</li>
+<li>TRUE. This correctly assigns the result of the row means calculation to the <code>bfi</code> data frame.</li>
+<li>TRUE. This is also a correct usage of <code>across()</code> to select the columns and compute row means with <code>NA</code> handling.</li>
+<li>FALSE. This does not use <code>across()</code> and will result in an error since <code>rowMeans</code> cannot directly take column ranges.</li>
+<li>FALSE. This is incorrect because <code>across()</code> is not designed to be used this way for row-wise operations.</li>
+<li>FALSE. This will not work as intended because <code>rowMeans</code> cannot directly take the result of <code>across()</code> without proper handling.</li>
+<li>FALSE. This is incorrect because <code>across()</code> cannot be used in this way to compute row means.</li>
+<li>FALSE. This does not use <code>across()</code> and will result in an error since <code>rowMeans</code> cannot directly take column ranges.</li>
+</ul>
+</section>
 </section>
 <section id="meta-information" class="level1">
 <h1>Meta-information</h1>
-<p>exname: Arithmetic extype: num exsolution: 7.00 extol: 0.01</p>
+<p>exname: Using across() to compute row means extype: mchoice exsolution: 11100000 exshuffle: 5</p>
 
 
 </section>

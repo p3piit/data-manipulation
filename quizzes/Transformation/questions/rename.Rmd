@@ -1,0 +1,59 @@
+```{r, echo=FALSE}
+data("bfi", package = "psychTools")
+library(dplyr)
+bfi <- mutate(bfi,
+              gm = case_when(
+                  age < 18 & gender == "male"   ~ "boy",
+                  age < 18 & gender == "female" ~ "girl",
+                  age >= 18 & gender == "male"  ~ "man",
+                  age >= 18 & gender == "female"~ "woman",
+                  TRUE ~ NA_character_),
+              gm = as.factor(gm))
+```
+
+
+Question
+========
+Which commands correctly rename variables in the `bfi` dataset using `rename()` or `rename_with()` from `dplyr`?
+
+```{r}
+head(bfi)
+```
+
+
+Answerlist
+----------
+* `bfi <- rename(bfi, sex = gender)`
+* `bfi <- rename_with(bfi, tolower)`
+* `bfi <- rename_with(bfi, .fn = tolower, .cols = matches("\\d$"))`
+* `bfi <- rename_with(bfi, toupper, .cols = 1:3)`
+* `bfi <- rename(bfi, gendered_maturity = gm)`
+* `bfi <- rename_with(bfi, .fn = toupper, .cols = starts_with("a"))`
+* `bfi <- rename(bfi, gendered_maturity = gm, ed = education)`
+* `bfi <- rename(bfi, gender = sex)`
+* `bfi <- rename(bfi, "sex" <- "gender")`
+* `rename(bfi, .fn = tolower, .cols = gender)`
+
+Solution
+========
+
+Answerlist
+----------
+* TRUE. Renames one variable.
+* TRUE. Renames all variables to lowercase.
+* TRUE. Renames variables ending with a digit to lowercase.
+* TRUE. Renames first three variables to uppercase.
+* TRUE. Renames one variable.
+* TRUE. Renames variables starting with "a" to uppercase.
+* TRUE. Renames two variables.
+* FALSE. Incorrect order of arguments.
+* FALSE. Incorrect syntax for renaming.
+* FALSE. Incorrect function usage.
+
+
+Meta-information
+================
+exname: Renaming variables
+extype: mchoice
+exsolution: 1111111000
+exshuffle: 5

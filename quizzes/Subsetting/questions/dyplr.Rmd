@@ -1,0 +1,40 @@
+Question
+========
+
+Using `dplyr`, how would you select only female participants under 25 years old from the `bfi` dataset? (Multiple answers may be correct.)
+
+Answerlist
+----------
+* `filter(bfi, gender == "female", age < 25)`
+* `filter(bfi, gender == "female" & age < 25)`
+* `filter(bfi, age < 25, gender == "female")`
+* `select(bfi, gender == "female", age < 25)`
+* `filter(bfi, gender = "female", age < 25)`
+* `bfi[bfi$gender == "female" & bfi$age < 25, ]`
+* `subset(bfi, gender == "female" & age < 25)`
+* `filter(bfi, age > 25 & gender == "female")`
+* `arrange(bfi, gender == "female" & age < 25)`
+* `bfi[filter, gender == "female", age < 25]`
+
+Solution
+========
+
+Answerlist
+----------
+* Correct. Both conditions are comma-separated, equivalent to “AND.”
+* Correct. The `&` operator gives the same result as commas.
+* Correct. The order of conditions does not matter.
+* Incorrect. `select()` is used to choose columns, not filter rows.
+* Incorrect. The single `=` is not valid for logical comparisons in R; use `==`.
+* Incorrect. While this base R syntax works, it is not using `dplyr`.
+* Incorrect. While this base R syntax works, it is not using `dplyr`.
+* Incorrect. This filters for participants older than 25, not under 25.
+* Incorrect. `arrange()` is used for sorting, not filtering.
+* Incorrect. `filter` must be a function, not an index argument.
+
+Meta-information
+================
+exname: dyplr
+extype: mchoice
+exsolution: 1110000000
+exshuffle: 5

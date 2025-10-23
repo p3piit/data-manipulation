@@ -1,0 +1,19 @@
+Question
+========
+Write a single line of base R code that returns a data frame containing only the rows of `bfi` where `age` is less than 50, `gender` is equal to 1, and `education` is not missing and greater than or equal to 4. The code must keep exactly the three columns `gender`, `age`, and `education` in that order. You must use only base R subsetting syntax.
+
+
+
+Solution
+========
+
+The required R code is:
+`bfi[age < 50 & gender == 1 & !is.na(education) & education >= 4, c("gender", "age", "education")]`  
+
+
+
+Meta-information
+================
+exname: logic
+extype: string
+exsolution: `bfi[age < 50 & gender == 1 & !is.na(education) & education >= 4, c("gender", "age", "education")]`

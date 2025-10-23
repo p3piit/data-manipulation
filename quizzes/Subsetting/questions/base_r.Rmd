@@ -1,0 +1,37 @@
+Question
+========
+Which of this phrases regarding the operators `[]`, `[[]]`, and `$` when subsetting a data frame are true?
+
+Answerlist
+----------
+* `[]` returns data frames, `[[]]` extracts single elements, and `$` extracts columns by name.
+* `[]` can subset both rows and columns, while `$` works only for named columns.
+* `[[]]` is typically used for lists and returns the object itself, not a sub-data frame.
+* All three are identical and interchangeable.
+* `$` can only be used for numeric indices.
+* `[[]]` can return multiple columns at once.
+* `[]` can only be used for lists, not for data frames.
+* `[[]]` and `$` behave identically in all cases.
+* Only `[]` supports logical conditions for subsetting.
+
+Solution
+========
+
+Answerlist
+----------
+* Correct. This summarizes the real behavior of these three operators.
+* Correct. This is a key distinction between these operators.
+* Correct. `[[]]` is primarily for lists and returns the actual object.
+* Incorrect. They differ in syntax, output type, and flexibility.
+* Incorrect. `$` works only with column names, not numbers.
+* Incorrect. `[[]]` extracts exactly one element at a time.
+* Incorrect. `[]` works perfectly with data frames.
+* Incorrect. They have different use cases and outputs.
+* Incorrect. You can use logical conditions with both `[]` and `filter()` but not `$` or `[[]]`.
+
+Meta-information
+================
+exname: Base R
+extype: schoice
+exsolution: 111000000
+exshuffle: 5

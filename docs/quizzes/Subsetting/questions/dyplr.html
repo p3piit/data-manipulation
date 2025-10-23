@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>logical – Data Manipulation</title>
+<title>dyplr – Data Manipulation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,14 +70,14 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading.callout {
-  border-left-color: purple;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -96,14 +96,14 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
+div.callout-reading.callout {
+  border-left-color: purple;
 }
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -327,23 +327,20 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 <section id="question" class="level1">
 <h1>Question</h1>
-<p>Which of the following expressions will return <code>TRUE</code>?</p>
+<p>Using <code>dplyr</code>, how would you select only female participants under 25 years old from the <code>bfi</code> dataset? (Multiple answers may be correct.)</p>
 <section id="answerlist" class="level2">
 <h2 class="anchored" data-anchor-id="answerlist">Answerlist</h2>
 <ul>
-<li><code>"foo" != "bar"</code></li>
-<li><code>(8 + 6) &lt; (8 * 6)</code></li>
-<li><code>(8 - 1) == 7 &amp; 7 &gt;= (14 / 2)</code></li>
-<li><code>"alice" == "bob" | "alice" == "alice"</code></li>
-<li><code>!(6 &gt; 7)</code></li>
-<li><code>TRUE</code></li>
-<li><code>FALSE</code></li>
-<li><code>"foo" == "bar"</code></li>
-<li><code>(8 - 1) == 7 &amp; 7 &gt; (14 / 2)</code></li>
-<li><code>"alice" == "bob" | "alice" != "alice"</code></li>
-<li><code>"alice" == "bob" &amp; "alice" == "alice"</code></li>
-<li><code>!TRUE</code></li>
-<li><code>TRUE &amp; FALSE</code></li>
+<li><code>filter(bfi, gender == "female", age &lt; 25)</code></li>
+<li><code>filter(bfi, gender == "female" &amp; age &lt; 25)</code></li>
+<li><code>filter(bfi, age &lt; 25, gender == "female")</code></li>
+<li><code>select(bfi, gender == "female", age &lt; 25)</code></li>
+<li><code>filter(bfi, gender = "female", age &lt; 25)</code></li>
+<li><code>bfi[bfi$gender == "female" &amp; bfi$age &lt; 25, ]</code></li>
+<li><code>subset(bfi, gender == "female" &amp; age &lt; 25)</code></li>
+<li><code>filter(bfi, age &gt; 25 &amp; gender == "female")</code></li>
+<li><code>arrange(bfi, gender == "female" &amp; age &lt; 25)</code></li>
+<li><code>bfi[filter, gender == "female", age &lt; 25]</code></li>
 </ul>
 </section>
 </section>
@@ -352,25 +349,22 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <section id="answerlist-1" class="level2">
 <h2 class="anchored" data-anchor-id="answerlist-1">Answerlist</h2>
 <ul>
-<li>TRUE: “foo” is not equal to “bar”</li>
-<li>TRUE: 14 is strictly less than 48</li>
-<li>TRUE: 7 is equal to 7, and 7 is greater than or equal to 7</li>
-<li>TRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”</li>
-<li>TRUE: 6 is not strictly greater than 7, and that result is negated</li>
-<li>TRUE: Trivially</li>
-<li>FALSE: Trivially</li>
-<li>FALSE: “foo” is not equal to “bar”</li>
-<li>FALSE: 7 is equal to 7, but 7 is not strictly greater than 7</li>
-<li>FALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”</li>
-<li>FALSE: “alice” is not equal to “bob”</li>
-<li>FALSE: Trivial negation</li>
-<li>FALSE: Trivially</li>
+<li>Correct. Both conditions are comma-separated, equivalent to “AND.”</li>
+<li>Correct. The <code>&amp;</code> operator gives the same result as commas.</li>
+<li>Correct. The order of conditions does not matter.</li>
+<li>Incorrect. <code>select()</code> is used to choose columns, not filter rows.</li>
+<li>Incorrect. The single <code>=</code> is not valid for logical comparisons in R; use <code>==</code>.</li>
+<li>Incorrect. While this base R syntax works, it is not using <code>dplyr</code>.</li>
+<li>Incorrect. While this base R syntax works, it is not using <code>dplyr</code>.</li>
+<li>Incorrect. This filters for participants older than 25, not under 25.</li>
+<li>Incorrect. <code>arrange()</code> is used for sorting, not filtering.</li>
+<li>Incorrect. <code>filter</code> must be a function, not an index argument.</li>
 </ul>
 </section>
 </section>
 <section id="meta-information" class="level1">
 <h1>Meta-information</h1>
-<p>exname: Logical Comparisons extype: mchoice exsolution: 1111110000000 exshuffle: 6</p>
+<p>exname: dyplr extype: mchoice exsolution: 1110000000 exshuffle: 5</p>
 
 
 </section>

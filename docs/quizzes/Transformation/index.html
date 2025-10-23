@@ -72,17 +72,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading.callout {
-  border-left-color: purple;
+div.callout-resource.callout {
+  border-left-color: orange;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -98,6 +98,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
+div.callout-reading.callout {
+  border-left-color: purple;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-reading-advanced.callout {
   border-left-color: red;
 }
@@ -109,19 +122,6 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -350,18 +350,71 @@ Note
 </div></div><div class="cell" data-layout-align="center">
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>Yes or No?</p>
-<div id="webex-1e2556e324f48ed4331a9b52749adc35" class="webex-radiogroup" data-answer="alUeBRkGSQMeBTs=">
-<label><input type="radio" autocomplete="off" name="1e2556e324f48ed4331a9b52749adc35"><span>No</span></label><label><input type="radio" autocomplete="off" name="1e2556e324f48ed4331a9b52749adc35"><span>No</span></label><label><input type="radio" autocomplete="off" name="1e2556e324f48ed4331a9b52749adc35"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="1e2556e324f48ed4331a9b52749adc35"><span>No</span></label><label><input type="radio" autocomplete="off" name="1e2556e324f48ed4331a9b52749adc35"><span>Yes</span></label>
+<p>Which <code>dplyr</code> command creates a mean-centered version of age called <code>age_mc</code> in the data frame <code>bfi</code>?</p>
+<div id="webex-40ebb2420b6caa55a69eba21d993a299" class="webex-radiogroup" data-answer="bwBJUk4CGAIcU2s=">
+<label><input type="radio" autocomplete="off" name="40ebb2420b6caa55a69eba21d993a299"><span><code>bfi &lt;- mutate(bfi, age = age - mean(age))</code></span></label><label><input type="radio" autocomplete="off" name="40ebb2420b6caa55a69eba21d993a299"><span><code>bfi &lt;- transform(bfi, age_mc = age - mean(bfi$age))</code></span></label><label><input type="radio" autocomplete="off" name="40ebb2420b6caa55a69eba21d993a299"><span><code>bfi &lt;- mutate(bfi, age_mc = age / mean(age))</code></span></label><label><input type="radio" autocomplete="off" name="40ebb2420b6caa55a69eba21d993a299"><span><code>bfi$age_mc &lt;- scale(age)</code></span></label><label><input type="radio" autocomplete="off" name="40ebb2420b6caa55a69eba21d993a299"><span><code>bfi &lt;- mutate(bfi, age_mc = age - mean(age))</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Wrong</li>
-<li>Wrong</li>
-<li>Wrong</li>
-<li>Wrong</li>
-<li>Correct</li>
+<li>FALSE. Overwrites <code>age</code> instead of creating <code>age_mc</code>.</li>
+<li>FALSE. Correct syntax but <code>mean(bfi$age)</code> is less common than <code>mean(age)</code> within <code>mutate()</code>.</li>
+<li>FALSE. Divides by the mean, normalization, not centering.</li>
+<li>FALSE. <code>scale()</code> standardizes (centers and scales), not just centers.</li>
+<li>TRUE. This correctly creates a mean-centered version of age.</li>
+</ul>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Which of the following use <code>across()</code> correctly to compute row means for all items from <code>"A1"</code> to <code>"A5"</code> and store the result in a new variable <code>agree</code>?</p>
+<div id="webex-c977534b430a3589d6f5114f190d4c69" class="webex-checkboxgroup" data-answer="OAgbBxkDGFIYA20=">
+<label><input type="checkbox" autocomplete="off" name="c977534b430a3589d6f5114f190d4c69"><span><code>bfi &lt;- mutate(bfi, agree = rowMeans(across(A1:A5), na.rm = TRUE))</code></span></label><label><input type="checkbox" autocomplete="off" name="c977534b430a3589d6f5114f190d4c69"><span><code>mutate(bfi, agree = rowMeans(A1:A5, na.rm = TRUE))</code></span></label><label><input type="checkbox" autocomplete="off" name="c977534b430a3589d6f5114f190d4c69"><span><code>mutate(bfi, agree = rowMeans(across(A1:A5))) |&gt; head()</code></span></label><label><input type="checkbox" autocomplete="off" name="c977534b430a3589d6f5114f190d4c69"><span><code>mutate(bfi, agree = rowMeans(bfi[A1:A5], na.rm = TRUE))</code></span></label><label><input type="checkbox" autocomplete="off" name="c977534b430a3589d6f5114f190d4c69"><span><code>bfi &lt;- mutate(bfi, agree = across(A1:A5, rowMeans))</code></span></label>
+</div>
+</div>
+<div class="webex-solution">
+<ul>
+<li>TRUE. This correctly assigns the result of the row means calculation to the <code>bfi</code> data frame.</li>
+<li>FALSE. This does not use <code>across()</code> and will result in an error since <code>rowMeans</code> cannot directly take column ranges.</li>
+<li>FALSE. This will not work as intended because <code>rowMeans</code> cannot directly take the result of <code>across()</code> without proper handling.</li>
+<li>FALSE. This does not use <code>across()</code> and will result in an error since <code>rowMeans</code> cannot directly take column ranges.</li>
+<li>FALSE. This is incorrect because <code>across()</code> cannot be used in this way to compute row means.</li>
+</ul>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>Which commands correctly rename variables in the <code>bfi</code> dataset using <code>rename()</code> or <code>rename_with()</code> from <code>dplyr</code>?</p>
+<div class="cell" data-layout-align="center">
+<p><code>{. .cell-code} head(bfi)</code></p>
+<div class="cell-output cell-output-stdout">
+<pre><code>      A1 A2 A3 A4 A5 C1 C2 C3 C4 C5 E1 E2 E3 E4 E5 N1 N2 N3 N4 N5 O1 O2 O3 O4
+61617  2  4  3  4  4  2  3  3  4  4  3  3  3  4  4  3  4  2  2  3  3  6  3  4
+61618  2  4  5  2  5  5  4  4  3  4  1  1  6  4  3  3  3  3  5  5  4  2  4  3
+61620  5  4  5  4  4  4  5  4  2  5  2  4  4  4  5  4  5  4  2  3  4  2  5  5
+61621  4  4  6  5  5  4  4  3  5  5  5  3  4  4  4  2  5  2  4  1  3  3  4  3
+61622  2  3  3  4  5  4  4  5  3  2  2  2  5  4  5  2  3  4  4  3  3  3  4  3
+61623  6  6  5  6  5  6  6  6  1  3  2  1  6  5  6  3  5  2  2  3  4  3  5  6
+      O5 gender education age   gm
+61617  3      1        NA  16 &lt;NA&gt;
+61618  3      2        NA  18 &lt;NA&gt;
+61620  2      2        NA  17 &lt;NA&gt;
+61621  5      2        NA  17 &lt;NA&gt;
+61622  3      1        NA  17 &lt;NA&gt;
+61623  1      2         3  21 &lt;NA&gt;</code></pre>
+</div>
+</div>
+<div id="webex-e7f40d38359a5af6889f1b1ec5ec8e7b" class="webex-checkboxgroup" data-answer="PgZKBRxVHwkfBWQ=">
+<label><input type="checkbox" autocomplete="off" name="e7f40d38359a5af6889f1b1ec5ec8e7b"><span><code>bfi &lt;- rename_with(bfi, .fn = toupper, .cols = starts_with("a"))</code></span></label><label><input type="checkbox" autocomplete="off" name="e7f40d38359a5af6889f1b1ec5ec8e7b"><span><code>bfi &lt;- rename(bfi, gendered_maturity = gm, ed = education)</code></span></label><label><input type="checkbox" autocomplete="off" name="e7f40d38359a5af6889f1b1ec5ec8e7b"><span><code>bfi &lt;- rename(bfi, sex = gender)</code></span></label><label><input type="checkbox" autocomplete="off" name="e7f40d38359a5af6889f1b1ec5ec8e7b"><span><code>bfi &lt;- rename_with(bfi, tolower)</code></span></label><label><input type="checkbox" autocomplete="off" name="e7f40d38359a5af6889f1b1ec5ec8e7b"><span><code>rename(bfi, .fn = tolower, .cols = gender)</code></span></label>
+</div>
+</div>
+<div class="webex-solution">
+<ul>
+<li>TRUE. Renames variables starting with “a” to uppercase.</li>
+<li>TRUE. Renames two variables.</li>
+<li>TRUE. Renames one variable.</li>
+<li>TRUE. Renames all variables to lowercase.</li>
+<li>FALSE. Incorrect function usage.</li>
 </ul>
 </div>
 </div>

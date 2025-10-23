@@ -1,0 +1,36 @@
+Question
+========
+Which of the following use `across()` correctly to compute row means for all items from `"A1"` to `"A5"` and store the result in a new variable `agree`?
+
+Answerlist
+----------
+* `mutate(bfi, agree = rowMeans(across(A1:A5), na.rm = TRUE))`
+* `bfi <- mutate(bfi, agree = rowMeans(across(A1:A5), na.rm = TRUE))`
+* `mutate(bfi, agree = rowMeans(across(c(A1:A5)), na.rm = TRUE))`
+* `mutate(bfi, agree = rowMeans(A1:A5, na.rm = TRUE))`
+* `mutate(bfi, agree = across(A1:A5, rowMeans, na.rm = TRUE))`
+* `mutate(bfi, agree = rowMeans(across(A1:A5))) |> head()`
+* `bfi <- mutate(bfi, agree = across(A1:A5, rowMeans))`
+* `mutate(bfi, agree = rowMeans(bfi[A1:A5], na.rm = TRUE))`
+
+Solution
+========
+
+Answerlist
+----------
+* TRUE. This is the correct way to use `across()` to select columns `A1` to `A5` and compute their row means while handling `NA` values.
+* TRUE. This correctly assigns the result of the row means calculation to the `bfi` data frame.
+* TRUE. This is also a correct usage of `across()` to select the columns and compute row means with `NA` handling.
+* FALSE. This does not use `across()` and will result in an error since `rowMeans` cannot directly take column ranges.
+* FALSE. This is incorrect because `across()` is not designed to be used this way for row-wise operations.
+* FALSE. This will not work as intended because `rowMeans` cannot directly take the result of `across()` without proper handling.
+* FALSE. This is incorrect because `across()` cannot be used in this way to compute row means.
+* FALSE. This does not use `across()` and will result in an error since `rowMeans` cannot directly take column ranges.
+
+
+Meta-information
+================
+exname: Using across() to compute row means
+extype: mchoice
+exsolution: 11100000
+exshuffle: 5

@@ -1,0 +1,44 @@
+Question
+========
+Suppose you have
+
+```{r}
+y <- data.frame(x1 = 1:10, x2 = c(-1, 1), x3 = runif(10))
+```
+Which of the following commands sort the rows by `x3` in ascending order (same result, possibly using different syntaxes)?
+
+Answerlist
+----------
+* `arrange(y, x3)`
+* `y[order(y$x3, decreasing = FALSE), ]`
+* `y[order(y$x3), ]`
+* `y |> arrange(x3)`
+* `arrange(y, +x3)`
+* `arrange(y, -x3)`
+* `y[order(x3), ]`
+* `sort(y$x3)`
+* `arrange(y, desc(x3))`
+* `filter(y, x3)`
+
+Solution
+========
+
+Answerlist
+----------
+* TRUE. `arrange(y, x3)` sorts the data frame `y` by the column `x3` in ascending order.
+* TRUE. `y[order(y$x3, decreasing = FALSE), ]` sorts the rows of `y` by `x3` in ascending order.
+* TRUE. `y[order(y$x3), ]` sorts the rows of `y` based on the values in `x3` in ascending order.
+* TRUE. `y |> arrange(x3)` uses the pipe operator to sort `y` by `x3` in ascending order.
+* TRUE. `arrange(y, +x3)` also sorts `y` by `x3` in ascending order; the `+` sign does not change the order.
+* FALSE. `arrange(y, -x3)` sorts `y` by `x3` in descending order, which is not what we want.
+* FALSE. `y[order(x3), ]` will result in an error because `x3` is not defined in the global environment; it needs to be referenced as `y$x3`.
+* FALSE. `sort(y$x3)` returns a sorted vector of `x3` values, but does not sort the rows of the data frame `y`.
+* FALSE. `arrange(y, desc(x3))` sorts `y` by `x3` in descending order, which is not what we want.
+* FALSE. `filter(y, x3)` does not sort the data frame; it filters rows based on the truthiness of `x3`, which is not relevant to sorting.
+
+Meta-information
+================
+exname: Logical Comparisons
+extype: mchoice
+exsolution: 1111100000
+exshuffle: 5
