@@ -19,7 +19,8 @@ exams2forms::exams2forms(
   file = list(
     "mean_centering.Rmd",
     "across.Rmd",
-    "rename.Rmd"
+    "rename.Rmd",
+    "maturity.Rmd"
   ),
   edir = here::here("quizzes", "Transformation", "questions")
 )

@@ -1,0 +1,20 @@
+Question
+========
+Write one line of `dplyr` code that creates a new variable `maturity` in the `bfi` data frame, that is equal to `"minor"` if `age` is less than 18 and is `"adult"` if `age` is greater than or equal to 18
+
+
+
+Solution
+========
+
+The required R code is:
+`bfi <- mutate(bfi, maturity = case_when(age < 18 ~ "minor", age >= 18 ~ "adult"))`  
+
+
+
+Meta-information
+================
+exname: Maturity variable based on age
+extype: string
+exsolution: `bfi <- mutate(bfi, maturity = case_when(age < 18 ~ "minor", age >= 18 ~ "adult"))`  
+

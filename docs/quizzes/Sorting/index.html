@@ -72,6 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-reading.callout {
+  border-left-color: purple;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -85,14 +98,14 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: purple;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -109,19 +122,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -351,17 +351,17 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which command sorts the numeric vector <code>x</code> in descending order using only base R?</p>
-<div id="webex-0db5bc9880dd2f80c06b710bb66509b0" class="webex-radiogroup" data-answer="a1ROBU5TFQkUADk=">
-<label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(x)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(-x)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(x, reverse = TRUE)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>sort(x, decreasing = TRUE)</code></span></label><label><input type="radio" autocomplete="off" name="0db5bc9880dd2f80c06b710bb66509b0"><span><code>x[sort(x)]</code></span></label>
+<div id="webex-cc9331c8ad1d15a81f387bbad4a6fc1c" class="webex-radiogroup" data-answer="OFMVAh8BTwhNVGw=">
+<label><input type="radio" autocomplete="off" name="cc9331c8ad1d15a81f387bbad4a6fc1c"><span><code>sort(x)</code></span></label><label><input type="radio" autocomplete="off" name="cc9331c8ad1d15a81f387bbad4a6fc1c"><span><code>sort(x, decreasing = TRUE)</code></span></label><label><input type="radio" autocomplete="off" name="cc9331c8ad1d15a81f387bbad4a6fc1c"><span><code>sort(x, reverse = TRUE)</code></span></label><label><input type="radio" autocomplete="off" name="cc9331c8ad1d15a81f387bbad4a6fc1c"><span><code>sort(-x)</code></span></label><label><input type="radio" autocomplete="off" name="cc9331c8ad1d15a81f387bbad4a6fc1c"><span><code>order(x, decreasing = TRUE)</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>FALSE. <code>sort(x)</code> sorts in ascending order by default.</li>
-<li>FALSE. <code>sort(-x)</code> sorts the negated values of <code>x</code>, which does not yield the correct descending order of <code>x</code>.</li>
-<li>FALSE. <code>sort(x, reverse = TRUE)</code> is not a valid argument in the <code>sort</code> function.</li>
 <li>TRUE. <code>sort(x, decreasing = TRUE)</code> correctly sorts <code>x</code> in descending order.</li>
-<li>FALSE. <code>x[sort(x)]</code> does not sort <code>x</code> in descending order; it returns elements of <code>x</code> at the positions given by sorting <code>x</code>.</li>
+<li>FALSE. <code>sort(x, reverse = TRUE)</code> is not a valid argument in the <code>sort</code> function.</li>
+<li>FALSE. <code>sort(-x)</code> sorts the negated values of <code>x</code>, which does not yield the correct descending order of <code>x</code>.</li>
+<li>FALSE. <code>order(x, decreasing = TRUE)</code> returns the indices that would sort <code>x</code> in descending order, not the sorted vector itself.</li>
 </ul>
 </div>
 </div>
@@ -372,17 +372,17 @@ Note
 <p><code>{. .cell-code} y &lt;- data.frame(x1 = 1:10, x2 = c(-1, 1), x3 = runif(10))</code></p>
 </div>
 <p>Which of the following commands sort the rows by <code>x3</code> in ascending order (same result, possibly using different syntaxes)?</p>
-<div id="webex-6caf06c288df0d876a5447d9a5b99bb9" class="webex-checkboxgroup" data-answer="bVNNVxwGTwIUCTk=">
-<label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>y[order(x3), ]</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>y[order(y$x3), ]</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>arrange(y, desc(x3))</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>sort(y$x3)</code></span></label><label><input type="checkbox" autocomplete="off" name="6caf06c288df0d876a5447d9a5b99bb9"><span><code>y |&gt; arrange(x3)</code></span></label>
+<div id="webex-cbbb483e8e6a25028506f2804e5ec102" class="webex-checkboxgroup" data-answer="OFNOUxgJH1UUVWs=">
+<label><input type="checkbox" autocomplete="off" name="cbbb483e8e6a25028506f2804e5ec102"><span><code>arrange(y, x3)</code></span></label><label><input type="checkbox" autocomplete="off" name="cbbb483e8e6a25028506f2804e5ec102"><span><code>arrange(y, +x3)</code></span></label><label><input type="checkbox" autocomplete="off" name="cbbb483e8e6a25028506f2804e5ec102"><span><code>y[order(y$x3, decreasing = FALSE), ]</code></span></label><label><input type="checkbox" autocomplete="off" name="cbbb483e8e6a25028506f2804e5ec102"><span><code>y[order(x3), ]</code></span></label><label><input type="checkbox" autocomplete="off" name="cbbb483e8e6a25028506f2804e5ec102"><span><code>arrange(y, -x3)</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>TRUE. <code>arrange(y, x3)</code> sorts the data frame <code>y</code> by the column <code>x3</code> in ascending order.</li>
+<li>TRUE. <code>arrange(y, +x3)</code> also sorts <code>y</code> by <code>x3</code> in ascending order; the <code>+</code> sign does not change the order.</li>
+<li>TRUE. <code>y[order(y$x3, decreasing = FALSE), ]</code> sorts the rows of <code>y</code> by <code>x3</code> in ascending order.</li>
 <li>FALSE. <code>y[order(x3), ]</code> will result in an error because <code>x3</code> is not defined in the global environment; it needs to be referenced as <code>y$x3</code>.</li>
-<li>TRUE. <code>y[order(y$x3), ]</code> sorts the rows of <code>y</code> based on the values in <code>x3</code> in ascending order.</li>
-<li>FALSE. <code>arrange(y, desc(x3))</code> sorts <code>y</code> by <code>x3</code> in descending order, which is not what we want.</li>
-<li>FALSE. <code>sort(y$x3)</code> returns a sorted vector of <code>x3</code> values, but does not sort the rows of the data frame <code>y</code>.</li>
-<li>TRUE. <code>y |&gt; arrange(x3)</code> uses the pipe operator to sort <code>y</code> by <code>x3</code> in ascending order.</li>
+<li>FALSE. <code>arrange(y, -x3)</code> sorts <code>y</code> by <code>x3</code> in descending order, which is not what we want.</li>
 </ul>
 </div>
 </div>

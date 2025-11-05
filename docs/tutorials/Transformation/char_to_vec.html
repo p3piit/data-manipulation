@@ -120,19 +120,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -157,6 +144,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -369,18 +369,18 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(animals <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"dog"</span>, <span class="st">"cat"</span>, <span class="st">"mongoose"</span>), <span class="dv">25</span>, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "cat"      "cat"      "dog"      "mongoose" "cat"      "cat"     
- [7] "mongoose" "dog"      "dog"      "mongoose" "cat"      "mongoose"
-[13] "cat"      "dog"      "dog"      "cat"      "cat"      "mongoose"
-[19] "cat"      "mongoose" "dog"      "cat"      "mongoose" "mongoose"
-[25] "cat"     </code></pre>
+<pre><code> [1] "mongoose" "mongoose" "dog"      "dog"      "dog"      "mongoose"
+ [7] "dog"      "dog"      "cat"      "mongoose" "cat"      "mongoose"
+[13] "cat"      "mongoose" "dog"      "cat"      "dog"      "dog"     
+[19] "cat"      "dog"      "mongoose" "dog"      "dog"      "mongoose"
+[25] "dog"     </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(animalsF <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(animals))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] cat      cat      dog      mongoose cat      cat      mongoose dog     
- [9] dog      mongoose cat      mongoose cat      dog      dog      cat     
-[17] cat      mongoose cat      mongoose dog      cat      mongoose mongoose
-[25] cat     
+<pre><code> [1] mongoose mongoose dog      dog      dog      mongoose dog      dog     
+ [9] cat      mongoose cat      mongoose cat      mongoose dog      cat     
+[17] dog      dog      cat      dog      mongoose dog      dog      mongoose
+[25] dog     
 Levels: cat dog mongoose</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(animalsF)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -391,8 +391,8 @@ Levels: cat dog mongoose</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>          factor
 character  cat dog mongoose
-  cat       11   0        0
-  dog        0   6        0
+  cat        5   0        0
+  dog        0  12        0
   mongoose   0   0        8</code></pre>
 </div>
 </div>

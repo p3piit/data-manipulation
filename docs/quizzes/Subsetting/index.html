@@ -72,6 +72,32 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-reading.callout {
+  border-left-color: purple;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
 div.callout-reading-advanced.callout {
   border-left-color: red;
 }
@@ -96,32 +122,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: purple;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -351,43 +351,43 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of this phrases regarding the operators <code>[]</code>, <code>[[]]</code>, and <code>$</code> when subsetting a data frame are true?</p>
-<div id="webex-187ce53213e22e7986669d115096343d" class="webex-radiogroup" data-answer="agkbU0kFHwIdAzg=">
-<label><input type="radio" autocomplete="off" name="187ce53213e22e7986669d115096343d"><span><code>[]</code> returns data frames, <code>[[]]</code> extracts single elements, and <code>$</code> extracts columns by name.</span></label><label><input type="radio" autocomplete="off" name="187ce53213e22e7986669d115096343d"><span>All three are identical and interchangeable.</span></label><label><input type="radio" autocomplete="off" name="187ce53213e22e7986669d115096343d"><span><code>[]</code> can only be used for lists, not for data frames.</span></label><label><input type="radio" autocomplete="off" name="187ce53213e22e7986669d115096343d"><span><code>[[]]</code> and <code>$</code> behave identically in all cases.</span></label><label><input type="radio" autocomplete="off" name="187ce53213e22e7986669d115096343d"><span>Only <code>[]</code> supports logical conditions for subsetting.</span></label>
+<div id="webex-21891c6bdb17a42ee55e89cf37015641" class="webex-radiogroup" data-answer="aQEUCR1TGlNIUmw=">
+<label><input type="radio" autocomplete="off" name="21891c6bdb17a42ee55e89cf37015641"><span>Only <code>[]</code> supports logical conditions for subsetting.</span></label><label><input type="radio" autocomplete="off" name="21891c6bdb17a42ee55e89cf37015641"><span><code>$</code> can only be used for numeric indices.</span></label><label><input type="radio" autocomplete="off" name="21891c6bdb17a42ee55e89cf37015641"><span><code>[]</code> can only be used for lists, not for data frames.</span></label><label><input type="radio" autocomplete="off" name="21891c6bdb17a42ee55e89cf37015641"><span><code>[]</code> can subset both rows and columns, while <code>$</code> works only for named columns.</span></label><label><input type="radio" autocomplete="off" name="21891c6bdb17a42ee55e89cf37015641"><span>All three are identical and interchangeable.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Correct. This summarizes the real behavior of these three operators.</li>
-<li>Incorrect. They differ in syntax, output type, and flexibility.</li>
-<li>Incorrect. <code>[]</code> works perfectly with data frames.</li>
-<li>Incorrect. They have different use cases and outputs.</li>
 <li>Incorrect. You can use logical conditions with both <code>[]</code> and <code>filter()</code> but not <code>$</code> or <code>[[]]</code>.</li>
+<li>Incorrect. <code>$</code> works only with column names, not numbers.</li>
+<li>Incorrect. <code>[]</code> works perfectly with data frames.</li>
+<li>Correct. This is a key distinction between these operators.</li>
+<li>Incorrect. They differ in syntax, output type, and flexibility.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Write a single line of base R code that returns a data frame containing only the rows of <code>bfi</code> where <code>age</code> is less than 50, <code>gender</code> is equal to 1, and <code>education</code> is not missing and greater than or equal to 4. The code must keep exactly the three columns <code>gender</code>, <code>age</code>, and <code>education</code> in that order. You must use only base R subsetting syntax.</p>
-<p><input class="webex-solveme" id="webex-2936cfa31e5087814e87c16ee1712f45" size="40" data-answer="aRtTVAUPOlJWABUMGAIIERJFX1INVVMXRQwKEQNGEhUTUEAYDQdJVlUQVlFMXldfHUUeFwZVQwYERV5eXEYKCBINHxYATj0RVgBbVF1FZBMYRWQVAlZTOUcdF20QA1BAUVhHXwwIPREYOFUSZQ=="></p>
+<p><input class="webex-solveme" id="webex-2c18eafc3abb6181f072ed4f5337ebcf" size="40" data-answer="aUFRWgMIPQJUBEJeFgQIEUAQUFcLAFEUFQ4OF1RCRUYTCkIWCwBOBlcUAQNCWFdfTxAREgAAQQVUR1pYC0JdWxJXHRgGSTpBVAQMBlNDZBNKEGsQBANROhcfE2tHBwcTUQJFUQoPOkEaPAJAaw=="></p>
 </div>
 <div class="webex-solution">
-<p>The required R code is: bfi[age &lt; 50 &amp; gender == 1 &amp; !is.na(education) &amp; education &gt;= 4, c(“gender”, “age”, “education”)]</p>
+<p>The required R code is: <code>bfi[age &lt; 50 &amp; gender == 1 &amp; !is.na(education) &amp; education &gt;= 4, c("gender", "age", "education")]</code></p>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Using <code>dplyr</code>, how would you select only female participants under 25 years old from the <code>bfi</code> dataset? (Multiple answers may be correct.)</p>
-<div id="webex-0b800f8c7d45b3ce5175b05d183161ee" class="webex-checkboxgroup" data-answer="a1MUABxWFFIbVWk=">
-<label><input type="checkbox" autocomplete="off" name="0b800f8c7d45b3ce5175b05d183161ee"><span><code>filter(bfi, age &lt; 25, gender == "female")</code></span></label><label><input type="checkbox" autocomplete="off" name="0b800f8c7d45b3ce5175b05d183161ee"><span><code>filter(bfi, gender = "female", age &lt; 25)</code></span></label><label><input type="checkbox" autocomplete="off" name="0b800f8c7d45b3ce5175b05d183161ee"><span><code>bfi[bfi$gender == "female" &amp; bfi$age &lt; 25, ]</code></span></label><label><input type="checkbox" autocomplete="off" name="0b800f8c7d45b3ce5175b05d183161ee"><span><code>filter(bfi, gender == "female", age &lt; 25)</code></span></label><label><input type="checkbox" autocomplete="off" name="0b800f8c7d45b3ce5175b05d183161ee"><span><code>filter(bfi, gender == "female" &amp; age &lt; 25)</code></span></label>
+<div id="webex-3a500f146299e8ffc96aef709359f261" class="webex-checkboxgroup" data-answer="aFAZARxWHQQaAmQ=">
+<label><input type="checkbox" autocomplete="off" name="3a500f146299e8ffc96aef709359f261"><span><code>filter(bfi, gender == "female" &amp; age &lt; 25)</code></span></label><label><input type="checkbox" autocomplete="off" name="3a500f146299e8ffc96aef709359f261"><span><code>filter(bfi, age &lt; 25, gender == "female")</code></span></label><label><input type="checkbox" autocomplete="off" name="3a500f146299e8ffc96aef709359f261"><span><code>bfi[filter, gender == "female", age &lt; 25]</code></span></label><label><input type="checkbox" autocomplete="off" name="3a500f146299e8ffc96aef709359f261"><span><code>bfi[bfi$gender == "female" &amp; bfi$age &lt; 25, ]</code></span></label><label><input type="checkbox" autocomplete="off" name="3a500f146299e8ffc96aef709359f261"><span><code>subset(bfi, gender == "female" &amp; age &lt; 25)</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Correct. The order of conditions does not matter.</li>
-<li>Incorrect. The single <code>=</code> is not valid for logical comparisons in R; use <code>==</code>.</li>
-<li>Incorrect. While this base R syntax works, it is not using <code>dplyr</code>.</li>
-<li>Correct. Both conditions are comma-separated, equivalent to “AND.”</li>
 <li>Correct. The <code>&amp;</code> operator gives the same result as commas.</li>
+<li>Correct. The order of conditions does not matter.</li>
+<li>Incorrect. <code>filter</code> must be a function, not an index argument.</li>
+<li>Incorrect. While this base R syntax works, it is not using <code>dplyr</code>.</li>
+<li>Incorrect. While this base R syntax works, it is not using <code>dplyr</code>.</li>
 </ul>
 </div>
 </div>

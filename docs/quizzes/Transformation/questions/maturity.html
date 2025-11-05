@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Conclusion – Data Manipulation</title>
+<title>maturity – Data Manipulation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./quizzes/Transformation/index.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8ae2bda6dacf22dc21c08edd286b282b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-8ae2bda6dacf22dc21c08edd286b282b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,30 +70,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-resource.callout {
-  border-left-color: orange;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -110,26 +96,39 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
 
 
-<link rel="stylesheet" href="html/webex.css">
+<link rel="stylesheet" href="../../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -146,7 +145,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <span class="menu-text">Open-Stat-Prog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
 <span class="menu-text">Data Modification</span></a>
   </li>  
 </ul>
@@ -175,7 +174,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./conclusion.html">Conclusion</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -189,13 +188,13 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./tutorials/Subsetting/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../tutorials/Subsetting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Subsetting</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -204,25 +203,25 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Subsetting/base_r.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Subsetting/base_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Subsetting in Base R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Subsetting/logic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Subsetting/logic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Logical subsetting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Subsetting/dplyr.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Subsetting/dplyr.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Subsetting with <code>dplyr</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quizzes/Subsetting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../quizzes/Subsetting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
@@ -230,7 +229,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./tutorials/Sorting/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../tutorials/Sorting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sorting</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -239,13 +238,13 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Sorting/sorting_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Sorting/sorting_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sorting Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quizzes/Sorting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../quizzes/Sorting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
@@ -253,7 +252,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./tutorials/Transformation/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../tutorials/Transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transformation</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -262,31 +261,31 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Transformation/char_to_vec.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Transformation/char_to_vec.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Converting Variables into Factors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Transformation/mutate.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Transformation/mutate.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transforming Variables with <code>mutate()</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Transformation/mult_var.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Transformation/mult_var.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Applying Operations Across Multiple Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/Transformation/cond_and_rename.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../tutorials/Transformation/cond_and_rename.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating Conditional Variables and Renaming Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quizzes/Transformation/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../quizzes/Transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
@@ -294,7 +293,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conclusion.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
@@ -303,42 +302,34 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question">Question</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#meta-information" id="toc-meta-information" class="nav-link" data-scroll-target="#meta-information">Meta-information</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Conclusion</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>By completing this module, you’ve developed a strong understanding of how to modify data in R—an essential step in preparing any dataset for analysis. You’ve learned how to subset data to focus on relevant observations, sort values to uncover patterns, and transform variables to make them meaningful and analysis-ready. You now have the tools to organize, refine, and structure data efficiently.</p>
-<p>Now you can take raw, unstructured data and shape it into a clean, organized format suitable for visualization, modeling, and reporting.</p>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>Now that you know how to clean, organize, and transform your data, it’s time to make your R code more powerful and efficient. In the next module, you’ll learn how to create your own functions, combine them into larger workflows, and use pipes to make your code easier to read. These tools will help you work faster, write cleaner code, and automate the repetitive parts of your analysis.</p>
-<ul>
-<li>Here, we’re linking to the <em>Functions Advanced</em> module.</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<section id="buttons">
-<a id="nextButton" class="btn btn-primary float-start" href="https://www.openstatprog.com/first-steps/" role="button"> Next Module </a>
+<section id="question" class="level1">
+<h1>Question</h1>
+<p>Write one line of <code>dplyr</code> code that creates a new variable <code>maturity</code> in the <code>bfi</code> data frame, that is equal to <code>"minor"</code> if <code>age</code> is less than 18 and is <code>"adult"</code> if <code>age</code> is greater than or equal to 18</p>
 </section>
-</div>
+<section id="solution" class="level1">
+<h1>Solution</h1>
+<p>The required R code is: <code>bfi &lt;- mutate(bfi, maturity = case_when(age &lt; 18 ~ "minor", age &gt;= 18 ~ "adult"))</code></p>
+</section>
+<section id="meta-information" class="level1">
+<h1>Meta-information</h1>
+<p>exname: Maturity variable based on age extype: string exsolution: <code>bfi &lt;- mutate(bfi, maturity = case_when(age &lt; 18 ~ "minor", age &gt;= 18 ~ "adult"))</code></p>
 
 
 </section>
@@ -430,6 +421,13 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -743,20 +741,11 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./quizzes/Transformation/index.html" class="pagination-link" aria-label="Knowledge Quiz">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Knowledge Quiz</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://uu.nl"><img src="./assets/images/UU_logo_2021_EN_BLACK.png" class="img-fluid" alt="UU" width="200"></a></p>
+<p><a href="https://uu.nl"><img src="../../../assets/images/UU_logo_2021_EN_BLACK.png" class="img-fluid" alt="UU" width="200"></a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -775,8 +764,8 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
     </div>
   </div>
 </footer>
-<script src="./js/bootstrapify.js"></script>
-<script src="./js/webex.js"></script>
+<script src="../../../js/bootstrapify.js"></script>
+<script src="../../../js/webex.js"></script>
 
 
 
